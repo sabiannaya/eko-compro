@@ -98,8 +98,8 @@ const MarqueeText = ({
         </div>
         
         {/* Gradient overlays to hide text edges */}
-        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 w-4 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 w-4 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
       </div>     
     </div>
   );
