@@ -71,8 +71,8 @@ const CardSlider = ({
       >
         {cards}
         {/* Gradient overlays to hide text edges */}
-        <div className="absolute left-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 w-4 sm:w-32 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 w-4 sm:w-32 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none z-10"></div>
       </Swiper>
     </>
   );
