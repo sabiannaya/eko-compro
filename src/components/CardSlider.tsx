@@ -26,7 +26,8 @@ const CardSlider = ({
 }: CardSliderData) => {
   const cards = data.map((item, index) => (
     <SwiperSlide key={index}>
-      <div className="flex flex-col items-center justify-center p-3 bg-white rounded-lg">
+      <div className="flex flex-col items-center justify-center p-3 bg-white rounded-lg shadow-sm 
+    transition-transform duration-300 hover:scale-105 active:scale-105">
         <Image
           src={item.image}
           alt={item.title || "Card Image"}

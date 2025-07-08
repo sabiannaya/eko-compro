@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -50,8 +50,9 @@ const Navbar: React.FC = () => {
         </span>
 
         {/* Desktop Navigation */}
-        <div className="hidden sm:block">
-          <ul className="flex space-x-4 text-gray-700">
+        <div className="hidden sm:flex-grow sm:flex sm:justify-center">
+          {/* Changed space-x-4 to space-x-8 for more spacing */}
+          <ul className="flex space-x-16 text-gray-700">
             <li>
               <Link
                 href="/"
