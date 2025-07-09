@@ -48,7 +48,7 @@ const TestimonialsFade = ({ testimonials = [] }: TestimonialsFadeProps) => {
                         fill
                         src={testimonial.image}
                         alt={`${testimonial.name}'s photo`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-scale-down"
                       />
                       </div>
                     </div>

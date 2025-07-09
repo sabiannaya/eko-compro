@@ -34,7 +34,7 @@ const CardSlider = ({
           height={imageHeight || 300}
           className="rounded-lg mb-4"
         />
-        <div className="h-32 flex flex-col items-center justify-center">
+        <div className="min-h-32 flex flex-col items-center justify-center">
           <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
             {item.title || "Default Title"}
           </h3>
@@ -65,14 +65,14 @@ const CardSlider = ({
           modifier: 1,
           slideShadows: false,
         }}
-        pagination={true}
         modules={[EffectCoverflow]}
         className="cardSlider relative"
+        autoHeight={true}
       >
         {cards}
         {/* Gradient overlays to hide text edges */}
-        <div className="absolute left-0 top-0 w-4 sm:w-32 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 w-4 sm:w-32 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 w-4 sm:w-16 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 w-4 sm:w-16 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none z-10"></div>
       </Swiper>
     </>
   );
