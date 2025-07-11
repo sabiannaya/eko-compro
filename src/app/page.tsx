@@ -68,17 +68,17 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-8 sm:gap-16">
         {/* Programs Section */}
-        <section className="pt-8 flex flex-col gap-6">
+        <section className="pt-16 flex flex-col gap-2 sm:px-10">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800">Our Programs</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 mx-auto">
               Explore our diverse range of programs designed to enhance learning
               and character development.
             </p>
           </div>
-          <div className="px-5">
+          <div className="rounded-2xl overflow-hidden">
             <CardSlider data={programData} />
           </div>
         </section>
@@ -132,26 +132,26 @@ export default async function HomePage() {
         </section>
 
         {/* Staff Section */}
-        <section className="px-5 flex flex-col gap-6">
+        <section className="px-5 flex flex-col gap-2">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 mx-auto">
               Meet our dedicated team of experienced educators and mentors.
             </p>
           </div>
-          <div className="px-4">
+          <div className="rounded-2xl overflow-hidden">
             <CardSlider
               data={staffData}
               imageHeight={200}
               imageWidth={150}
-              slidesDesktop={2}
+              slidesDesktop={3}
             />
           </div>
         </section>
 
         {/* Facilities Section */}
         <section className="px-5 flex flex-col gap-6">
-          <div className="text-center ">
+          <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Learning Facilities
             </h2>
@@ -160,19 +160,19 @@ export default async function HomePage() {
               level.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8">
+          <div className="bg-white rounded-2xl shadow-lg px-5">
             {facilitiesData.map((level, index) => (
               <div
                 key={index}
-                className={`${
+                className={`p-5 ${
                   index < facilitiesData.length - 1
-                    ? "border-b border-gray-200 pb-8"
+                    ? "border-b border-gray-200"
                     : ""
                 }`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3">
+                <div className="grid grid-cols-1 lg:grid-cols-3 ">
                   <div className="lg:col-span-1">
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    <h3 className="text-2xl font-semibold text-gray-800">
                       {level.title}
                     </h3>
                   </div>
@@ -205,8 +205,8 @@ export default async function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="w-full px-5 flex flex-col items-center justify-center gap-6">
-          <div className="">
+        <section className="w-full px-5 flex flex-col items-center justify-center gap-2">
+          <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               What Our Students Say
             </h2>
