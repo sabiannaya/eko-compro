@@ -26,13 +26,13 @@ const TestimonialsFade = ({ testimonials = [] }: TestimonialsFadeProps) => {
           pagination={{
             clickable: true,
           }}
-          modules={[EffectFade, Pagination]}
+          modules={[EffectFade, Pagination, Autoplay]}
           className="testimonialsFade"
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: true,
-          // }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           loop={true}
         >
           {testimonials.map((testimonial, idx) => (

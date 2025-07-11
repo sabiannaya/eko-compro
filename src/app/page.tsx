@@ -13,7 +13,6 @@ import {
 } from "@/data/dummy";
 
 // Simulate loading for demonstration
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function HomePage() {
   // await delay(2500);

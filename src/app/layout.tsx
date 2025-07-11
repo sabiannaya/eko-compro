@@ -1,6 +1,5 @@
 import "./globals.css";
 import PageTransition from "@/components/PageTransition";
-import Head from "next/head";
 export default function RootLayout({
   children,
 }: {
