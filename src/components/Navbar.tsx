@@ -52,11 +52,11 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <div className="hidden sm:flex-grow sm:flex sm:justify-center">
           {/* Changed space-x-4 to space-x-8 for more spacing */}
-          <ul className="flex space-x-16 text-gray-700">
+          <ul className="flex space-x-16 text-gray-600">
             <li>
               <Link
                 href="/"
-                className={`hover:text-gray-300 ${
+                className={`hover:text-gray-800 hover:font-semibold  ${
                   pathname === "/" ? "font-semibold" : ""
                 }`}
               >
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/about"
-                className={`hover:text-gray-300 ${
+                className={`hover:text-gray-800 hover:font-semibold  ${
                   pathname === "/about" ? "font-semibold" : ""
                 }`}
               >
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/contact"
-                className={`hover:text-gray-300 ${
+                className={`hover:text-gray-800 hover:font-semibold  ${
                   pathname === "/contact" ? "font-semibold" : ""
                 }`}
               >
@@ -157,7 +157,7 @@ const Navbar: React.FC = () => {
                 className={`block py-3 px-4 rounded-md transition-colors ${
                   pathname === "/"
                     ? "bg-gray-100 font-semibold text-gray-900"
-                    : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                    : "text-gray-800 hover:bg-gray-50 hover:text-gray-900"
                 }`}
               >
                 Home
@@ -169,7 +169,7 @@ const Navbar: React.FC = () => {
                 className={`block py-3 px-4 rounded-md transition-colors ${
                   pathname === "/about"
                     ? "bg-gray-100 font-semibold text-gray-900"
-                    : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                    : "text-gray-800 hover:bg-gray-50 hover:text-gray-900"
                 }`}
               >
                 About
@@ -181,7 +181,7 @@ const Navbar: React.FC = () => {
                 className={`block py-3 px-4 rounded-md transition-colors ${
                   pathname === "/contact"
                     ? "bg-gray-100 font-semibold text-gray-900"
-                    : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                    : "text-gray-800 hover:bg-gray-50 hover:text-gray-900"
                 }`}
               >
                 Contact

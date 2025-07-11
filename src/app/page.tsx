@@ -229,14 +229,14 @@ export default async function HomePage() {
               "Brighter Minds with Deeper Values",
             ]}
             interval={5000}
-            speed={50}
+            speed={36}
           />
         </section>
 
         <section className="overflow-hidden">
           <MarqueeImageLeft
             images={["/Logo.png", "/globe.svg", "/Logo.png", "/globe.svg"]}
-            speed={18}
+            speed={36}
             imageHeight={96}
             imageWidth={128}
           />
