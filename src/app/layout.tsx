@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
 import "./globals.css";
+import PageTransition from "@/components/PageTransition";
 export default function RootLayout({
   children,
 }: {
@@ -7,11 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header>
-          <Navbar />
-        </header>
-        <main>{children}</main>
+      <body className="font-sans antialiased">
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

@@ -35,8 +35,8 @@ const TestimonialsFade = ({ testimonials = [] }: TestimonialsFadeProps) => {
           // }}
           loop={true}
         >
-          {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id}>
+          {testimonials.map((testimonial, idx) => (
+            <SwiperSlide key={testimonial.name + idx}>
               <div className="relative bg-white">
                 {/* Mobile Layout (< lg) */}
                 <div className="flex flex-col lg:hidden h-[40rem] p-2">
