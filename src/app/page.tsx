@@ -140,7 +140,12 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="px-4">
-            <CardSlider data={staffData} imageHeight={200} imageWidth={150} slidesDesktop={2} />
+            <CardSlider
+              data={staffData}
+              imageHeight={200}
+              imageWidth={150}
+              slidesDesktop={2}
+            />
           </div>
         </section>
 
@@ -200,8 +205,8 @@ export default async function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        {/* <section className="px-5 flex flex-col gap-6">
-          <div className="text-center ">
+        <section className="w-full px-5 flex flex-col items-center justify-center gap-6">
+          <div className="">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               What Our Students Say
             </h2>
@@ -210,10 +215,10 @@ export default async function HomePage() {
               us.
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full sm:w-2/3 mx-auto">
             <TestimonialsFade testimonials={testimonials} />
           </div>
-        </section> */}
+        </section>
 
         {/* Marquee Sections */}
         <section className="overflow-hidden">

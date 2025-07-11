@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
+import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -59,7 +59,7 @@ const TestimonialsFade = ({ testimonials = [] }: TestimonialsFadeProps) => {
                     <div className="flex-1 flex items-center justify-center">
                       <div className="h-44 flex items-center justify-center">
                         <blockquote className="text-gray-700 text-base leading-relaxed italic overflow-y-auto max-h-full px-2 kecil">
-                          "{testimonial.text}"
+                          &quot;{testimonial.text}&quot;
                         </blockquote>
                       </div>
                     </div>
@@ -93,7 +93,7 @@ const TestimonialsFade = ({ testimonials = [] }: TestimonialsFadeProps) => {
                     <div className="flex-1 flex items-center justify-center">
                       <div className="h-72 flex items-center justify-center w-full pb-1">
                         <blockquote className="text-gray-700 text-xl leading-relaxed italic overflow-y-auto max-h-full gede">
-                          "{testimonial.text}"
+                          &quot;{testimonial.text}&quot;
                         </blockquote>
                       </div>
                     </div>
