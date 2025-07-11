@@ -40,7 +40,7 @@ export const staffData = [
   {
     title: "Eko Sulaksono, S.Pd.",
     description: "Founder & Head Tutor",
-    image: "/Logo.png",
+    image: "/murid2.jpeg",
   },
   {
     title: "Dra. Mery Mariam",
@@ -50,7 +50,7 @@ export const staffData = [
   {
     title: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
     description: "Senior Tutor - Science",
-    image: "/Logo.png",
+    image: "/murid2.jpeg",
   },
   {
     title: "Jinan Kautsar Syifa Sulaksono, S.K.M",
@@ -166,7 +166,7 @@ export const testimonials = [
   {
     name: "Videl",
     role: "Student",
-    image: "/murid.jpg",
+    image: "/murid2.jpeg",
     text: "Seneng dan seru belajar di GL, awal awal tegang belajar di sana karena belum kenal lebih deket dengan para tutor di GL tapi setelah lama belajar di sana jadi seruu belajar jadi kerasa bentar banget karena serius tapi asik. Jadi belajar kerasanya seneng, mood bawaannyaa pokonya asik bangett di GL.. Makasih ya para tutor GL udah mau sabar dan mau di tanya tanyaa terus. Makasih juga gapernah bosen untuk ngingetin di catet yaa, di ulangin lagi yaa, makasih yaaa",
   },
   {

@@ -16,7 +16,7 @@ import {
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function HomePage() {
-  await delay(2500);
+  // await delay(2500);
 
   return (
     <div className="bg-slate-100">
@@ -68,26 +68,24 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <div className="space-y-16 py-16">
+      <div className="flex flex-col gap-12">
         {/* Programs Section */}
-        <section className="px-5">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Our Programs
-            </h2>
+        <section className="pt-8 flex flex-col gap-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800">Our Programs</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Explore our diverse range of programs designed to enhance learning
               and character development.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8">
+          <div className="px-5">
             <CardSlider data={programData} />
           </div>
         </section>
 
         {/* Teaching Methods Section */}
-        <section className="px-5">
-          <div className="text-center mb-12">
+        <section className="px-5 flex flex-col gap-6">
+          <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               How We Teach
             </h2>
@@ -134,21 +132,21 @@ export default async function HomePage() {
         </section>
 
         {/* Staff Section */}
-        <section className="px-5">
-          <div className="text-center mb-12">
+        <section className="px-5 flex flex-col gap-6">
+          <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Meet our dedicated team of experienced educators and mentors.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <CardSlider data={staffData} imageHeight={200} imageWidth={150} />
+          <div className="px-4">
+            <CardSlider data={staffData} imageHeight={200} imageWidth={150} slidesDesktop={2} />
           </div>
         </section>
 
         {/* Facilities Section */}
-        <section className="px-5">
-          <div className="text-center mb-12">
+        <section className="px-5 flex flex-col gap-6">
+          <div className="text-center ">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Learning Facilities
             </h2>
@@ -157,7 +155,7 @@ export default async function HomePage() {
               level.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8 space-y-12">
+          <div className="bg-white rounded-2xl shadow-lg p-8">
             {facilitiesData.map((level, index) => (
               <div
                 key={index}
@@ -174,7 +172,7 @@ export default async function HomePage() {
                     </h3>
                   </div>
                   <div className="lg:col-span-2">
-                    <ul className="space-y-4">
+                    <ul className="">
                       {level.facilities.map((facility, facilityIndex) => (
                         <li
                           key={facilityIndex}
@@ -202,8 +200,8 @@ export default async function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="px-5">
-          <div className="text-center mb-12">
+        {/* <section className="px-5 flex flex-col gap-6">
+          <div className="text-center ">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               What Our Students Say
             </h2>
@@ -215,7 +213,7 @@ export default async function HomePage() {
           <div className="max-w-4xl mx-auto">
             <TestimonialsFade testimonials={testimonials} />
           </div>
-        </section>
+        </section> */}
 
         {/* Marquee Sections */}
         <section className="overflow-hidden">

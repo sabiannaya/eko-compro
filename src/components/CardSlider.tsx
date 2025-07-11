@@ -17,25 +17,29 @@ interface CardSliderData {
   }[];
   imageHeight?: number;
   imageWidth?: number;
+  slidesDesktop?: number;
 }
 
 const CardSlider = ({
   data = [],
   imageHeight = 300,
   imageWidth = 200,
+  slidesDesktop = 3,
 }: CardSliderData) => {
   const cards = data.map((item, index) => (
     <SwiperSlide key={index}>
-      <div className="flex flex-col items-center justify-center p-3 bg-white rounded-lg shadow-sm 
-    transition-transform duration-300 hover:scale-105 active:scale-105">
+      <div
+        className="flex flex-col gap-5 p-5 items-center justify-center bg-white rounded-lg shadow-sm 
+  transition-transform duration-300 hover:scale-105 active:scale-105 origin-center overflow-visible"
+      >
         <Image
           src={item.image}
           alt={item.title || "Card Image"}
           width={imageWidth || 200}
           height={imageHeight || 300}
-          className="rounded-lg mb-4"
+          className="rounded-lg object-cover"
         />
-        <div className="min-h-32 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
             {item.title || "Default Title"}
           </h3>
@@ -56,7 +60,7 @@ const CardSlider = ({
         slidesPerView={1}
         breakpoints={{
           1024: {
-            slidesPerView: 3,
+            slidesPerView: slidesDesktop || 3,
           },
         }}
         coverflowEffect={{
@@ -67,13 +71,14 @@ const CardSlider = ({
           slideShadows: false,
         }}
         modules={[EffectCoverflow]}
-        className="cardSlider relative"
+        className="cardSlider relative "
+        // style={{ overflow: "visible" }}
         autoHeight={true}
       >
         {cards}
         {/* Gradient overlays to hide text edges */}
-        <div className="absolute left-0 top-0 w-4 sm:w-16 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 w-4 sm:w-16 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none z-10"></div>
+        {/* <div className="absolute -translate-x-8 left-0 top-0 w-4 sm:w-16 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 w-4 sm:w-16 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none z-10"></div> */}
       </Swiper>
     </>
   );
