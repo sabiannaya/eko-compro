@@ -16,7 +16,7 @@ import {
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function HomePage() {
-  await delay(2000);
+  await delay(2500);
 
   return (
     <div className="bg-slate-100">
@@ -167,7 +167,7 @@ export default async function HomePage() {
                     : ""
                 }`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3">
                   <div className="lg:col-span-1">
                     <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                       {level.title}
@@ -178,7 +178,7 @@ export default async function HomePage() {
                       {level.facilities.map((facility, facilityIndex) => (
                         <li
                           key={facilityIndex}
-                          className="flex items-start space-x-4"
+                          className="flex flex-row items-center gap-3"
                         >
                           <div className="relative w-12 h-12 flex-shrink-0">
                             <Image
