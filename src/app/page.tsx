@@ -80,9 +80,7 @@ export default async function HomePage() {
               and character development.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <CardSlider data={programData} />
-          </div>
+          <CardSlider data={programData} />
         </section>
 
         {/* Teaching Methods Section */}
