@@ -1,11 +1,11 @@
 import Image from "next/image";
 import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
-import MarqueeText from "@/components/MarqueeText";
+// import MarqueeText from "@/components/MarqueeText";
 import MarqueeImageLeft from "@/components/MarqueeImageLeft";
-import Activities from "@/components/activities";
+// import Activities from "@/components/activities";
 import Footer from "@/components/Footer";
-import { CalendarIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { CalendarIcon} from "@heroicons/react/24/outline";
 import {
   programData,
   staffData,
@@ -16,7 +16,7 @@ import {
 } from "@/data/dummy";
 
 // Simulate loading for demonstration
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+// const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function HomePage() {
   // await delay(2500);
