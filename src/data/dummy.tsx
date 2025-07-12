@@ -230,3 +230,79 @@ export const testimonials = [
     text: "GL itu seru, tutor-tutornya baik, dan asik. Belajar jadi lebih mudah dimengerti. ",
   },
 ];
+
+// In /data/dummy.ts
+export const activitiesData = [
+  {
+    id: "act-1",
+    title: "Kegiatan belajar intensif",
+    description: "Persiapan intensif untuk kompetisi akademik nasional dan internasional bersama pelatih ahli kami.",
+    image: "/activities1.jpg",
+    category: "intensif",
+    schedule: "Setiap Sabtu, 9AM-12PM",
+    tags: ["Luring"]
+  },
+  {
+    id: "act-2",
+    title: "Kegiatan Belajar Daring",
+    description: "Program daring selama 3 hari yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
+    image: "/activitieszoom1.jpg",
+    category: "Intensif zoom",
+    schedule: "Tergantung jadwal",
+    tags: ["daring"]
+  },
+  {
+    id: "act-3",
+    title: "Kegiatan Belajar Daring",
+    description: "Program daring selama 3 hari yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
+    image: "/activitieszoom2.jpg",
+    category: "Intensif zoom 2",
+    schedule: "Tergantung jadwal",
+    tags: ["daring"]
+  },
+  {
+    id: "act-4",
+    title: "Kegiatan Belajar Daring",
+    description: "Program daring selama 3 hari yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
+    image: "/activitieszoom3.jpg",
+    category: "Intensif zoom 3",
+    schedule: "Tergantung jadwal",
+    tags: ["daring"]
+  },
+  {
+    id: "act-5",
+    title: "Kegiatan Belajar Daring",
+    description: "Program daring selama 3 hari yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
+    image: "/activitieszoom4.jpg",
+    category: "Intensif zoom 4",
+    schedule: "Tergantung jadwal",
+    tags: ["daring"]
+  },
+  // {
+  //   id: "act-6",
+  //   title: "Mathletes Club",
+  //   description: "Advanced math problem solving sessions for students who love mathematical challenges.",
+  //   image: "/activities/math-club.jpg",
+  //   category: "Academic",
+  //   schedule: "Every Wednesday, 3:30PM-5PM",
+  //   tags: ["Mathematics", "Problem Solving"]
+  // },
+  // {
+  //   id: "act-7",
+  //   title: "Art Exhibition",
+  //   description: "Showcase of student artwork with professional critiques and public viewing sessions.",
+  //   image: "/activities/art-exhibition.jpg",
+  //   category: "Arts",
+  //   schedule: "May 20th-25th",
+  //   tags: ["Painting", "Sculpture", "Creativity"]
+  // },
+  // {
+  //   id: "act-8",
+  //   title: "Debate Tournament",
+  //   description: "Inter-school debate competition with categories for different skill levels.",
+  //   image: "/activities/debate.jpg",
+  //   category: "Communication",
+  //   schedule: "March 10th-12th",
+  //   tags: ["Public Speaking", "Critical Thinking"]
+  // }
+];

@@ -84,7 +84,7 @@ const CardSlider = ({
           slideShadows: false,
         }}
         modules={[EffectCoverflow]}
-        className="cardSlider !overflow-visible"
+        className="cardSlider "
         autoHeight={true}
       >
         {cards}

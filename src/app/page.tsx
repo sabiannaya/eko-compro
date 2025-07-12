@@ -3,16 +3,20 @@ import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
 import MarqueeText from "@/components/MarqueeText";
 import MarqueeImageLeft from "@/components/MarqueeImageLeft";
+import Activities from "@/components/activities";
 import Footer from "@/components/Footer";
+import { CalendarIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import {
   programData,
   staffData,
   testimonials,
   teachingMethods,
   facilitiesData,
+  activitiesData,
 } from "@/data/dummy";
 
 // Simulate loading for demonstration
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function HomePage() {
   // await delay(2500);
@@ -219,8 +223,77 @@ export default async function HomePage() {
           </div>
         </section>
 
+ <section className="px-5 flex flex-col gap-8 py-12 bg-gradient-to-b from-slate-50 to-slate-100">
+  <div className="text-center">
+    <h2 className="text-3xl font-bold text-gray-800 mb-3 relative inline-block">
+      Our Activities
+      <span className="absolute bottom-0 left-0 w-full h-1 transform scale-x-75 -translate-y-1"></span>
+    </h2>
+    <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+      Engaging activities designed to enhance learning, teamwork, and character
+      development.
+    </p>
+  </div>
+
+  {/* Desktop Grid */}
+  <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-8">
+    {activitiesData.map((activity) => (
+      <div
+        key={activity.id}
+        className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white
+                   hover:bg-blue-50"
+      >
+        {/* Perbesar Foto: Mengubah tinggi container gambar */}
+        <div className="relative h-60 sm:h-72 w-full overflow-hidden"> {/* Tinggi gambar diperbesar */}
+          <Image
+            src={activity.image}
+            alt={activity.title}
+            fill
+            className="object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-105" // rounded-t-2xl agar sesuai dengan rounded-2xl parent
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div> 
+
+        {/* Kecilkan Kotak Putih Deskripsi (sekarang untuk title & info) */}
+        <div className="p-4 sm:p-5 flex flex-col gap-1"> {/* Padding dikurangi, gap dikurangi */}
+          <div className="flex items-center gap-2 mb-1"> {/* mb dikurangi */}
+            <CalendarIcon className="w-5 h-5 text-blue-500" />
+            <span className="text-sm text-gray-500">{activity.schedule}</span>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors"> {/* Menghilangkan mb-3 */}
+            {activity.title}
+          </h3>
+
+          {/* Deskripsi sudah dihilangkan */}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* Mobile Carousel */}
+  <div className="md:hidden px-2">
+    <CardSlider
+      data={activitiesData.map(a => ({
+        title: a.title,
+        image: a.image
+      }))}
+      // imageHeight dan imageWidth tidak perlu diset di sini karena sudah diatur di CardSlider
+      // slidesDesktop={1} // Ini tidak diperlukan jika CardSlider sudah memiliki logic responsive sendiri
+    />
+  </div>
+
+  {/* CTA Button */}
+  {/* <div className="text-center mt-6">
+    <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105">
+      View All Activities
+      <ArrowRightIcon className="w-5 h-5 inline ml-2" />
+    </button>
+  </div> */}
+</section>
+
         {/* Marquee Sections */}
-        <section className="overflow-hidden">
+        {/* <section className="overflow-hidden">
           <MarqueeText
             text={[
               "SHINE",
@@ -230,7 +303,7 @@ export default async function HomePage() {
             interval={5000}
             speed={36}
           />
-        </section>
+        </section> */}
 
         <section className="overflow-hidden">
           <MarqueeImageLeft
