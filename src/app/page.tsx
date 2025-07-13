@@ -5,10 +5,10 @@
   import TestimonialsFade from "@/components/TestimonialsFade";
   // import MarqueeText from "@/components/MarqueeText";
   import MarqueeImageLeft from "@/components/MarqueeImageLeft";
-  // import Activities from "@/components/Activities";
+  // import Activities from "@/components/activities";
   import Footer from "@/components/Footer";
   import { CalendarIcon} from "@heroicons/react/24/outline";
-  import ActivityModal from "@/components/ActivityModal";
+  import ActivityModal from "@/components/activitymodal";
   import { useState } from "react";
 
   import {
