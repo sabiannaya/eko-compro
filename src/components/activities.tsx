@@ -20,23 +20,25 @@ interface ActivitiesSectionProps {
 export default function ActivitiesSection({ activities }: ActivitiesSectionProps) {
   return (
     <section className="px-5 flex flex-col gap-8 py-12 bg-gradient-to-b from-slate-50 to-slate-100">
-      {/* ... (other sections remain the same) ... */}
+      
 
       {/* Mobile Carousel - Updated for Swiper */}
       <div className="md:hidden px-2">
         <CardSlider 
           data={activities.map(activity => ({
+            id: activity.id,           
             title: activity.title,
             description: activity.description,
-            image: activity.image
+            image: activity.image,
+            schedule: activity.schedule, 
+            category: activity.category, 
+            tags: activity.tags    
           }))}
           imageHeight={200}
           imageWidth={300}
-          slidesDesktop={1} // For mobile, we only want 1 slide
+          slidesDesktop={1} 
         />
       </div>
-
-      {/* ... (rest of your component) ... */}
     </section>
   );
 }

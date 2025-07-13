@@ -9,47 +9,62 @@ import "swiper/css";
 // import required modules
 import { EffectCoverflow } from "swiper/modules";
 
-interface CardSliderData {
-  data: {
-    title?: string;
-    description?: string;
-    image: string;
-  }[];
+interface CardSliderData<T = any> {
+  data: (T & { id: string | number; image: string; })[];
   imageHeight?: number;
-  imageWidth?: number;
+  imageWidth?: number;  
   slidesDesktop?: number;
+  onCardClick?: (item: T) => void;
 }
 
 const CardSlider = ({
   data = [],
-  imageHeight = 300,
-  imageWidth = 200,
+  imageHeight = 300, 
+  imageWidth = 200,  
   slidesDesktop = 3,
+  onCardClick,
 }: CardSliderData) => {
   const cards = data.map((item, index) => (
-    <SwiperSlide key={index} className="overflow-visible">
+    <SwiperSlide key={item.id || index} className="overflow-visible">
       <div className="overflow-visible p-4">
-        {" "}
-        {/* Padding container to allow expansion */}
         <div
-          className="flex flex-col gap-5 p-5 items-center justify-center bg-white rounded-lg shadow-sm 
-      transition-all duration-300 hover:scale-105 hover:z-10 active:scale-105 
-      origin-center relative"
+          className="flex flex-col gap-5 p-5 items-center justify-center bg-white rounded-lg shadow-sm
+          transition-all duration-300 hover:scale-105 hover:z-10 active:scale-105
+          origin-center relative group cursor-pointer"
+          onClick={() => onCardClick && onCardClick(item)}
         >
           <Image
             src={item.image}
-            alt={item.title || "Card Image"}
-            width={imageWidth || 200}
-            height={imageHeight || 300}
-            className="rounded-lg object-cover"
+            alt={(item as any).title || (item as any).name || "Card Image"}
+            width={imageWidth} 
+            height={imageHeight} 
+            className="rounded-lg object-cover" 
           />
+
           <div className="flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
-              {item.title || "Default Title"}
+              {(item as any).title || (item as any).name || "Default Title"}
             </h3>
             <p className="text-gray-600 text-sm text-center line-clamp-3">
-              {item.description || "Default description for the card."}
+              {(item as any).description || (item as any).position || "Default description for the card."}
             </p>
+            {(item as any).schedule && (
+              <p className="text-sm text-gray-500 mt-1">{(item as any).schedule}</p>
+            )}
+            {(item as any).category && (
+              <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs mt-2">
+                {(item as any).category}
+              </span>
+            )}
+            {(item as any).tags && (item as any).tags.length > 0 && (
+              <div className="flex flex-wrap gap-1 mt-2">
+                {(item as any).tags.map((tag: string, tagIdx: number) => (
+                  <span key={tagIdx} className="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -58,8 +73,6 @@ const CardSlider = ({
 
   return (
     <div className="overflow-visible ">
-      {" "}
-      {/* Parent container allows overflow */}
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
