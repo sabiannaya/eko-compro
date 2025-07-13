@@ -8,7 +8,7 @@
   // import Activities from "@/components/activities";
   import Footer from "@/components/Footer";
   import { CalendarIcon} from "@heroicons/react/24/outline";
-  import ActivityModal from "@/components/activitymodal";
+  import ActivityModal from "@/components/ActivityModal";
   import { useState } from "react";
 
   import {
@@ -18,6 +18,7 @@
     teachingMethods,
     facilitiesData,
     activitiesData,
+    Activity
   } from "@/data/dummy";
 
   // Simulate loading for demonstration
@@ -25,17 +26,6 @@
 
   export default function HomePage() {
     // await delay(2500);
-
-    type Activity = {
-  id: string; 
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  schedule: string;
-  tags: string[];
-};
-
     
     const [showModal, setShowModal] = useState(false);
     const [selectedActivity, setSelectedActivity] = useState<Activity | null>(null);

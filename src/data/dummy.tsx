@@ -274,7 +274,19 @@ export const testimonials = [
 ];
 
 // In /data/dummy.ts
-export const activitiesData = [
+
+export type Activity = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string; 
+  schedule: string;
+  tags: string[];
+};
+
+
+export const activitiesData: Activity[] = [
   {
     id: "act-1",
     title: "Kegiatan belajar intensif",

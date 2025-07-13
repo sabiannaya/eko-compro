@@ -21,7 +21,9 @@ interface CardData {
   tags?: string[];
 }
 
-interface CardSliderData<T = CardData> {
+
+
+interface CardSliderData  <T extends CardData = CardData> {
   data: T[];
   imageHeight?: number;
   imageWidth?: number;
@@ -29,13 +31,13 @@ interface CardSliderData<T = CardData> {
   onCardClick?: (item: T) => void;
 }
 
-const CardSlider = ({
+const CardSlider = <T extends CardData> ({
   data = [],
   imageHeight = 300,
   imageWidth = 200,
   slidesDesktop = 3,
   onCardClick,
-}: CardSliderData) => {
+}: CardSliderData<T>) => {
   const cards = data.map((item, index) => (
     <SwiperSlide key={item.id || index} className="overflow-visible">
       <div className="overflow-visible p-4">
