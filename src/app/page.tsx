@@ -267,7 +267,7 @@
 
                   <div className="relative h-72 sm:h-80 w-full overflow-hidden"> 
                     <Image
-                      src={activity.image}
+                      src={activity.images[0]}
                       alt={activity.title}
                       fill
                       className="object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-105"

@@ -1,29 +1,27 @@
+// components/CardSlider.tsx
 "use client";
 import Image from "next/image";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { EffectCoverflow } from "swiper/modules";
 
 interface CardData {
   id: string;
   name?: string;
   title: string;
-  description: string;
-  image: string;
+  description?: string;
+  
+  // *** CRUCIAL FIX HERE: Change 'image' to 'images' ***
+  images?: string[]; // Now consistently using 'images' (plural) and it's optional
+  thumbnail: string; // 'thumbnail' remains required for the main card image
+  
   position?: string;
   schedule?: string;
   category?: string;
   tags?: string[];
 }
 
-
-
-interface CardSliderData  <T extends CardData = CardData> {
+interface CardSliderData <T extends CardData = CardData> {
   data: T[];
   imageHeight?: number;
   imageWidth?: number;
@@ -48,7 +46,7 @@ const CardSlider = <T extends CardData> ({
           onClick={() => onCardClick && onCardClick(item)}
         >
           <Image
-            src={item.image}
+            src={item.thumbnail}
             alt={item.title || item.name || "Card Image"}
             width={imageWidth}
             height={imageHeight}
@@ -59,11 +57,17 @@ const CardSlider = <T extends CardData> ({
             <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
               {item.title || item.name || "Default Title"}
             </h3>
-            <p className="text-gray-600 text-sm text-center line-clamp-3">
-              {item.description ||
-                item.position ||
-                "Default description for the card."}
-            </p>
+            {item.description && (
+              <p className="text-gray-600 text-sm text-center line-clamp-3">
+                {item.description}
+              </p>
+            )}
+            {!item.description && item.position && (
+              <p className="text-gray-600 text-sm text-center line-clamp-3">
+                {item.position}
+              </p>
+            )}
+            
             {item.schedule && (
               <p className="text-sm text-gray-500 mt-1">{item.schedule}</p>
             )}
