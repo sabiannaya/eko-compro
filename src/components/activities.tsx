@@ -1,6 +1,4 @@
 "use client";
-// import Image from "next/image";
-// import { CalendarIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import CardSlider from "./CardSlider";
 
 type Activity = {

@@ -3,9 +3,6 @@
 
 import Image from "next/image";
 import { XMarkIcon } from "@heroicons/react/24/outline"; 
-
-
-
 // Definisi interface untuk props modal
 interface ActivityModalProps {
   isOpen: boolean;
