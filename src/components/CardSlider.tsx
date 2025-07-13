@@ -9,18 +9,30 @@ import "swiper/css";
 // import required modules
 import { EffectCoverflow } from "swiper/modules";
 
-interface CardSliderData<T = any> {
-  data: (T & { id: string | number; image: string; })[];
+interface CardData {
+  id: string;
+  name?: string;
+  title: string;
+  description: string;
+  image: string;
+  position?: string;
+  schedule?: string;
+  category?: string;
+  tags?: string[];
+}
+
+interface CardSliderData<T = CardData> {
+  data: T[];
   imageHeight?: number;
-  imageWidth?: number;  
+  imageWidth?: number;
   slidesDesktop?: number;
   onCardClick?: (item: T) => void;
 }
 
 const CardSlider = ({
   data = [],
-  imageHeight = 300, 
-  imageWidth = 200,  
+  imageHeight = 300,
+  imageWidth = 200,
   slidesDesktop = 3,
   onCardClick,
 }: CardSliderData) => {
@@ -35,31 +47,36 @@ const CardSlider = ({
         >
           <Image
             src={item.image}
-            alt={(item as any).title || (item as any).name || "Card Image"}
-            width={imageWidth} 
-            height={imageHeight} 
-            className="rounded-lg object-cover" 
+            alt={item.title || item.name || "Card Image"}
+            width={imageWidth}
+            height={imageHeight}
+            className="rounded-lg object-cover"
           />
 
           <div className="flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
-              {(item as any).title || (item as any).name || "Default Title"}
+              {item.title || item.name || "Default Title"}
             </h3>
             <p className="text-gray-600 text-sm text-center line-clamp-3">
-              {(item as any).description || (item as any).position || "Default description for the card."}
+              {item.description ||
+                item.position ||
+                "Default description for the card."}
             </p>
-            {(item as any).schedule && (
-              <p className="text-sm text-gray-500 mt-1">{(item as any).schedule}</p>
+            {item.schedule && (
+              <p className="text-sm text-gray-500 mt-1">{item.schedule}</p>
             )}
-            {(item as any).category && (
+            {item.category && (
               <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs mt-2">
-                {(item as any).category}
+                {item.category}
               </span>
             )}
-            {(item as any).tags && (item as any).tags.length > 0 && (
+            {item.tags && item.tags.length > 0 && (
               <div className="flex flex-wrap gap-1 mt-2">
-                {(item as any).tags.map((tag: string, tagIdx: number) => (
-                  <span key={tagIdx} className="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">
+                {item.tags.map((tag: string, tagIdx: number) => (
+                  <span
+                    key={tagIdx}
+                    className="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs"
+                  >
                     {tag}
                   </span>
                 ))}
