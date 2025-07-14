@@ -77,7 +77,7 @@ export const staffData: StaffData[] = [ // Terapkan tipe StaffData
     id: "staff-1",
     title: "Eko Sulaksono, S.Pd.",
     description: "Founder & Head Tutor",
-    thumbnail: "/murid2.jpeg",
+    thumbnail: "/Logo.jpeg",
   },
   {
     id: "staff-2",
@@ -89,7 +89,7 @@ export const staffData: StaffData[] = [ // Terapkan tipe StaffData
     id: "staff-3",
     title: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
     description: "Senior Tutor - Science",
-    thumbnail: "/murid2.jpeg",
+    thumbnail: "/Logo.jpeg",
   },
   {
     id: "staff-4",
@@ -221,81 +221,87 @@ export const facilitiesData = [
 ];
 
 export const testimonials = [
-  {
+
+    {
     id: "test-1",
-    name: "Videl",
+    name: "Azka",
     role: "Student",
-    image: "/murid2.jpeg",
-    text: "Seneng dan seru belajar di GL, awal awal tegang belajar di sana karena belum kenal lebih deket dengan para tutor di GL tapi setelah lama belajar di sana jadi seruu belajar jadi kerasa bentar banget karena serius tapi asik. Jadi belajar kerasanya seneng, mood bawaannyaa pokonya asik bangett di GL.. Makasih ya para tutor GL udah mau sabar dan mau di tanya tanyaa terus. Makasih juga gapernah bosen untuk ngingetin di catet yaa, di ulangin lagi yaa, makasih yaaa",
+    image: "/Azka.jpg",
+    text: "Seru, metode belajar di GL tidak membosankan, banyak temannya.",
   },
+
   {
     id: "test-2",
     name: "Haura",
     role: "Student",
-    image: "/images.jpeg",
+    image: "/Haura.jpg",
     text: "Awal masuk jujur ngerasa takut, terutama kalau offline, tapi lama kelamaan biasa aja sih karena ada banyak temen jugaa di GL, terus jadi selangkah lebih tau dan ngerti. Kayak mtk jadi lebih gampang karena uda belajar di GL, jadi pas di sekolah kerasa gampang pas belajar/mau ulangan, intinya kebantu banget sih, di GL tuh. Kadang suka mumet karena TO nya banyak, apalagi kalau ditumpuk, huhuu nyesel deh. Tapi overall, aku seneng banget sih, bisa jadi bagian dari GL, apalagi kalo belajar sama Kak Haura. Makasih yaa buat semua yang udah ngajarin di GL.",
   },
-  {
+
+ {
     id: "test-3",
-    name: "Ghaida",
-    role: "Teacher",
-    image: "/images2.jpg",
-    text: "Sangat menyenangkan les di GL, belajar lebih cepat ngerti. Terlihat nyantai tp serius.. belajar kalau belum ngerti itu di ajarin sampai ngerti.. jadi matematika yang tadinya paling gak suka jadi suka banget. kalau ada ulangan jadi tenang. ",
+    name: "Malika",
+    role: "Student",
+    image: "/Malika.jpg",
+    text: "Belajar di GL seru, asik, dan oke, banyak temannya, dan tutor-tutornya ramah. ",
   },
+
   {
     id: "test-4",
-    name: "Selma",
+    name: "Khansa",
     role: "Alumni",
-    image: "/images.jpeg",
-    text: "Pertama kali aku di GL aku jadi mood belajar, belajar jadi seru, nilai nya juga meningkat. Pokonya belajar jadi asik, tutor-tutornya seru, asik, dan baikk. Makasih ka Haura, ka Syifa, bu Merry, pa Eko udah sabar ajarin aku, makasihjuga ka mau cerita pengalaman kaka yang bikin aku termotivasi, makasih ya kaa",
+    image: "/Khansa.jpg",
+    text: "Belajar di GL menyenangkan, cepat menghafal materinya, pokoknya seru, semangat terus GL!",
   },
   {
     id: "test-5",
-    name: "Asyraf",
+    name: "Luna",
     role: "Student",
-    image: "/images2.jpg",
-    text: "Bagus, materinya juga jadi lebih cepat paham karena di review terus sama materinya juga lebih cepat dari yang sekolah.",
+    image: "/Luna.jpg",
+    text: "Seru banget, pelajarannya gampang dimengerti. Makasih ya buat Pak Eko, Bu Mery, Kak Haura, dan Kak Syifa udah mau ngajarin aku dan teman-teman aku, semoga staff-staff GL sehat selalu dan terus semangat mengajar anak-anak GL.",
   },
   {
     id: "test-6",
-    name: "Alif",
+    name: "Videl",
     role: "Student",
-    image: "/images.jpeg",
-    text: "Awal ikut GL seru dan ngebantu banget. Karena TO nya rutin setiap bulan, kadang kalau kelewat jadi numpuk sampai akhirnya ngerasa kawatir takut ketinggalan dan masih banyak kurangnya. Makasi staf-staf GL, udah banyak ngebantu dan buat aku berkembang. ",
+    image: "/Videl_Cropped.png",
+    text: "Seneng dan seru belajar di GL, awal awal tegang belajar di sana karena belum kenal lebih deket dengan para tutor di GL tapi setelah lama belajar di sana jadi seruu belajar jadi kerasa bentar banget karena serius tapi asik. Jadi belajar kerasanya seneng, mood bawaannyaa pokonya asik bangett di GL.. Makasih ya para tutor GL udah mau sabar dan mau di tanya tanyaa terus. Makasih juga gapernah bosen untuk ngingetin di catet yaa, di ulangin lagi yaa, makasih yaaa",
   },
   {
     id: "test-7",
-    name: "Azka",
+    name: "Alif",
     role: "Student",
-    image: "/images2.jpg",
-    text: "Seru, metode belajar di GL tidak membosankan, banyak temannya.",
+    image: "/freepik1.jpg",
+    text: "Awal ikut GL seru dan ngebantu banget. Karena TO nya rutin setiap bulan, kadang kalau kelewat jadi numpuk sampai akhirnya ngerasa kawatir takut ketinggalan dan masih banyak kurangnya. Makasi staf-staf GL, udah banyak ngebantu dan buat aku berkembang. ",
   },
   {
     id: "test-8",
     name: "Yasmin",
     role: "Student",
-    image: "/images.jpeg",
+    image: "/freepik2.jpg",
     text: "Menyenangkan bisa belajar dan mendapatkan banyak ilmu di GL.",
   },
+
   {
     id: "test-9",
-    name: "Malika",
-    role: "Student",
-    image: "/images2.jpg",
-    text: "Belajar di GL seru, asik, dan oke, banyak temannya, dan tutor-tutornya ramah. ",
+    name: "Ghaida",
+    role: "Teacher",
+    image: "/freepik3.jpg",
+    text: "Sangat menyenangkan les di GL, belajar lebih cepat ngerti. Terlihat nyantai tp serius.. belajar kalau belum ngerti itu di ajarin sampai ngerti.. jadi matematika yang tadinya paling gak suka jadi suka banget. kalau ada ulangan jadi tenang. ",
   },
+
   {
     id: "test-10",
     name: "Najwa",
     role: "Student",
-    image: "/images.jpeg",
+    image: "/freepik1.jpg",
     text: "Semenjak masuk GL, belajar tentang materi yang lagi dipelajari jadi lebih paham dan jelas.",
   },
   {
     id: "test-11",
     name: "Alea ",
     role: "Student",
-    image: "/images2.jpg",
+    image: "/freepik2.jpg",
     text: "GL itu seru, tutor-tutornya baik, dan asik. Belajar jadi lebih mudah dimengerti. ",
   },
 ];
