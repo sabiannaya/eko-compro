@@ -4,7 +4,7 @@ import Image from "next/image";
 import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
 // import MarqueeText from "@/components/MarqueeText";
-import MarqueeImageLeft from "@/components/MarqueeImageLeft";
+// import MarqueeImageLeft from "@/components/MarqueeImageLeft";
 // import Activities from "@/components/activities";
 import Footer from "@/components/Footer";
 import { CalendarIcon } from "@heroicons/react/24/outline";
