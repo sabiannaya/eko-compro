@@ -4,7 +4,7 @@ import Image from "next/image";
 import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
 // import MarqueeText from "@/components/MarqueeText";
-import MarqueeImageLeft from "@/components/MarqueeImageLeft";
+// import MarqueeImageLeft from "@/components/MarqueeImageLeft";
 // import Activities from "@/components/activities";
 import Footer from "@/components/Footer";
 import { CalendarIcon } from "@heroicons/react/24/outline";
@@ -313,14 +313,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="overflow-hidden">
+        {/* <section className="overflow-hidden">
           <MarqueeImageLeft
-            images={["/Logo.png", "/globe.svg", "/Logo.png", "/globe.svg"]}
+            images={["/Logo.png"]}
             speed={36}
             imageHeight={96}
             imageWidth={128}
           />
-        </section>
+        </section> */}
       </div>
 
       <Footer />
