@@ -9,7 +9,7 @@ import MarqueeImageLeft from "@/components/MarqueeImageLeft";
 import Footer from "@/components/Footer";
 import { CalendarIcon } from "@heroicons/react/24/outline";
 import ActivityModal from "@/components/ActivityModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   programData,
@@ -26,6 +26,19 @@ export default function HomePage() {
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(
     null
   );
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showModal]);
 
   const openModal = (activity: Activity) => {
     setSelectedActivity(activity);
