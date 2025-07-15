@@ -1,31 +1,43 @@
 "use client";
 
-import Image from "next/image";
 import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
+import Image from "next/image";
 // import MarqueeText from "@/components/MarqueeText";
 // import MarqueeImageLeft from "@/components/MarqueeImageLeft";
 // import Activities from "@/components/activities";
-import Footer from "@/components/Footer";
-import { CalendarIcon } from "@heroicons/react/24/outline";
 import ActivityModal from "@/components/ActivityModal";
-import { useState, useEffect } from "react";
+import Footer from "@/components/Footer";
+import LanguageToggle from "@/components/LanguageToggle"; // Import the LanguageToggle component
+import { CalendarIcon } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react";
+import { Activity, HeroContent } from "@/utils/TypeContext"; // Impor tipe data Activity dari types.ts
 
 import {
-  programData,
-  staffData,
-  testimonials,
-  teachingMethods,
-  facilitiesData,
   activitiesData,
-  Activity,
+  facilitiesData,
+  programData,
+  teachingMethods,
+  testimonials,
+  staffData,
 } from "@/data/dummy";
+
+export const heroContent: HeroContent = {
+  title: "MR. EKO Guidance Learning",
+  shine: "SHINE: Cerdas – Berhati – Individu dengan – Etika Mulia",
+  subtitle: "Pikiran Cemerlang dengan Nilai Mendalam",
+  description: {
+    id: "Guidance Learning Mr. Eko merupakan lembaga bimbingan belajar yang telah berdiri sejak tahun 2017, dengan komitmen untuk menjadi mitra belajar terbaik bagi siswa dalam mencapai prestasi akademik dan pembentukan karakter.",
+    en: "Guidance Learning Mr. Eko is a tutoring institution established in 2017, committed to being the best learning partner for students in achieving academic excellence and character development.",
+  },
+};
 
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(
     null
   );
+
 
   useEffect(() => {
     if (showModal) {
@@ -48,6 +60,12 @@ export default function HomePage() {
   const closeModal = () => {
     setShowModal(false);
     setSelectedActivity(null);
+  };
+
+  const [currentLanguage, setCurrentLanguage] = useState("id");
+
+  const handleLanguageChange = (language: string) => {
+    setCurrentLanguage(language);
   };
 
   return (
@@ -73,10 +91,7 @@ export default function HomePage() {
                     Brighter Minds with Deeper Values
                   </h3>
                   <p className="leading-relaxed font-light max-w-2xl mx-auto">
-                    Guidance Learning Mr. Eko merupakan lembaga bimbingan
-                    belajar yang telah berdiri sejak tahun 2017, dengan komitmen
-                    untuk menjadi mitra belajar terbaik bagi siswa dalam
-                    mencapai prestasi akademik dan pembentukan karakter.
+                    {heroContent.description[currentLanguage]}
                   </p>
                 </div>
               </div>
@@ -91,10 +106,7 @@ export default function HomePage() {
               BRIGHTER MINDS WITH DEEPER VALUES
             </h1>
             <p className="text-gray-700 leading-relaxed">
-              Guidance Learning Mr. Eko merupakan lembaga bimbingan belajar yang
-              telah berdiri sejak tahun 2017, dengan komitmen untuk menjadi
-              mitra belajar terbaik bagi siswa dalam mencapai prestasi akademik
-              dan pembentukan karakter.
+              {heroContent.description[currentLanguage]}
             </p>
           </div>
         </div>
@@ -111,7 +123,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden">
-            <CardSlider data={programData} />
+            <CardSlider data={programData} currentLanguage={currentLanguage} />
           </div>
         </section>
 
@@ -174,6 +186,7 @@ export default function HomePage() {
           <div className="rounded-2xl overflow-hidden">
             <CardSlider
               data={staffData}
+              currentLanguage={currentLanguage}
               imageHeight={200}
               imageWidth={150}
               slidesDesktop={3}
@@ -277,7 +290,7 @@ export default function HomePage() {
                 <div className="relative h-72 sm:h-80 w-full overflow-hidden">
                   <Image
                     src={activity.images[0]}
-                    alt={activity.title}
+                    alt={activity.title[currentLanguage]}
                     fill
                     className="object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -297,20 +310,20 @@ export default function HomePage() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors">
-                    {activity.title}
+                    {activity.title[currentLanguage]}
                   </h3>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Mobile Carousel */}
+          {/* Mobile Carousel
           <div className="md:hidden px-2">
             <CardSlider
               data={activitiesData} //
               onCardClick={openModal}
             />
-          </div>
+          </div> */}
         </section>
 
         {/* <section className="overflow-hidden">
@@ -328,6 +341,10 @@ export default function HomePage() {
         isOpen={showModal}
         onClose={closeModal}
         activity={selectedActivity}
+      />
+      <LanguageToggle
+        onLanguageChange={handleLanguageChange}
+        currentLanguage={currentLanguage}
       />
     </div>
   );

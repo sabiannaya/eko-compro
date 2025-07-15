@@ -1,112 +1,104 @@
-export interface ProgramData {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string; // Sekarang menggunakan 'thumbnail'
-}
+import { Activity, ProgramData, StaffData } from "@/utils/TypeContext"; // Impor tipe data dari types.ts
 
-export interface StaffData {
-  id: string;
-  title: string; // Menggunakan 'title' untuk nama staf
-  description: string; // Menggunakan 'description' untuk posisi staf
-  thumbnail: string; // Sekarang menggunakan 'thumbnail'
-}
-
-// --- INI ADALAH DEFINISI TIPE ACTIVITY YANG BENAR ---
-// Perhatikan 'thumbnail' (string) dan 'images' (array of strings)
-export type Activity = {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string; // Gambar utama untuk card atau tampilan ringkasan
-  images: string[]; // Array dari semua gambar yang terkait dengan aktivitas ini
-  category: string;
-  schedule: string;
-  tags: string[];
-};
-
-
-
-export const programData: ProgramData[] = [ // Terapkan tipe ProgramData
+export const programData: ProgramData[] = [
   {
     id: "prog-1",
-    title: "Elementary Program",
-    description: "Comprehensive learning foundation for elementary students",
+    title: {
+      en: "Intensive Learning Program",
+      id: "Program Belajar Intensif",
+    },
+    description: {
+      en: "A comprehensive program designed to prepare students for national and international academic competitions through focused training sessions.",
+      id: "Program komprehensif yang dirancang untuk mempersiapkan siswa menghadapi kompetisi akademik nasional dan internasional melalui sesi pelatihan yang terfokus.",
+    },
     thumbnail: "/Logo.png",
   },
   {
     id: "prog-2",
-    title: "Junior High Program",
-    description: "Academic excellence preparation for junior high students",
-    thumbnail: "/Logo.png",
-  },
-  {
-    id: "prog-3",
-    title: "Senior High Program",
-    description: "University entrance exam preparation and academic support",
-    thumbnail: "/Logo.png",
-  },
-  {
-    id: "prog-4",
-    title: "Intensive Course",
-    description: "Focused learning sessions for exam preparation",
-    thumbnail: "/Logo.png",
-  },
-  {
-    id: "prog-5",
-    title: "Private Tutoring",
-    description: "One-on-one personalized learning experience",
-    thumbnail: "/Logo.png",
-  },
-  {
-    id: "prog-6",
-    title: "Online Classes",
-    description: "Flexible online learning with expert guidance",
-    thumbnail: "/Logo.png",
-  },
-  {
-    id: "prog-7",
-    title: "Character Building",
-    description: "Developing both academic skills and moral values",
+    title: {
+      en: "Regular Learning Program",
+      id: "Program Belajar Reguler",
+    },
+    description: {
+      en: "A structured learning program that emphasizes teamwork, problem-solving, and character development through regular sessions.",
+      id: "Program pembelajaran terstruktur yang menekankan kerja sama tim, pemecahan masalah, dan pengembangan karakter melalui sesi reguler.",
+    },
     thumbnail: "/Logo.png",
   },
 ];
 
-export const staffData: StaffData[] = [ // Terapkan tipe StaffData
+export const staffData: StaffData[] = [
+  // Terapkan tipe StaffData
   {
     id: "staff-1",
-    title: "Eko Sulaksono, S.Pd.",
-    description: "Founder & Head Tutor",
-    thumbnail: "/Logo.jpeg",
+    title: {
+      en: "Eko Sulaksono, S.Pd.",
+      id: "Eko Sulaksono, S.Pd.",
+    },
+    description: {
+      en: "Founder & Head Tutor",
+      id: "Pendiri & Kepala Tutor",
+    },
+    thumbnail: "/Logo.png",
   },
   {
     id: "staff-2",
-    title: "Dra. Mery Mariam",
-    description: "Co-Founder & Senior Tutor",
+    title: {
+      en: "Dra. Mery Mariam",
+      id: "Dra. Mery Mariam",
+    },
+    description: {
+      en: "Co-Founder & Senior Tutor",
+      id: "Co-Founder & Tutor Senior",
+    },
     thumbnail: "/Logo.png",
   },
   {
     id: "staff-3",
-    title: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
-    description: "Senior Tutor - Science",
-    thumbnail: "/Logo.jpeg",
+    title: {
+      en: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
+      id: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
+    },
+    description: {
+      en: "Senior Tutor - Science",
+      id: "Tutor Senior - Sains",
+    },
+    thumbnail: "/Logo.png",
   },
   {
     id: "staff-4",
-    title: "Jinan Kautsar Syifa Sulaksono, S.K.M",
-    description: "Tutor - Mathematics",
+    title: {
+      en: "Jinan Kautsar Syifa Sulaksono, S.K.M",
+      id: "Jinan Kautsar Syifa Sulaksono, S.K.M",
+    },
+    description: {
+      en: "Tutor - Mathematics",
+      id: "Tutor - Matematika",
+    },
     thumbnail: "/Logo.png",
   },
   {
     id: "staff-5",
-    title: "Muhammad Fauzi Zaydan Rizqullah Sulaksono",
-    description: "Tutor - Physics & Chemistry",
+    title: {
+      en: "Muhammad Fauzi Zaydan Rizqullah Sulaksono",
+      id: "Muhammad Fauzi Zaydan Rizqullah Sulaksono",
+    },
+    description: {
+      en: "Tutor - Physics & Chemistry",
+      id: "Tutor - Fisika & Kimia",
+    },
     thumbnail: "/Logo.png",
   },
   {
     id: "staff-6",
-    title: "Rizky Muhammad Mufti Firdaus Sulaksono",
-    description: "Tutor - Biology & Mathematics",
+    title: {
+      en: "Rizky Muhammad Mufti Firdaus Sulaksono",
+      id: "Rizky Muhammad Mufti Firdaus Sulaksono",
+    },
+    description: {
+      en: "Tutor - Biology & Mathematics",
+      id: "Tutor - Biologi & Matematika",
+    },
     thumbnail: "/Logo.png",
   },
 ];
@@ -221,8 +213,7 @@ export const facilitiesData = [
 ];
 
 export const testimonials = [
-
-    {
+  {
     id: "test-1",
     name: "Azka",
     role: "Student",
@@ -238,7 +229,7 @@ export const testimonials = [
     text: "Awal masuk jujur ngerasa takut, terutama kalau offline, tapi lama kelamaan biasa aja sih karena ada banyak temen jugaa di GL, terus jadi selangkah lebih tau dan ngerti. Kayak mtk jadi lebih gampang karena uda belajar di GL, jadi pas di sekolah kerasa gampang pas belajar/mau ulangan, intinya kebantu banget sih, di GL tuh. Kadang suka mumet karena TO nya banyak, apalagi kalau ditumpuk, huhuu nyesel deh. Tapi overall, aku seneng banget sih, bisa jadi bagian dari GL, apalagi kalo belajar sama Kak Haura. Makasih yaa buat semua yang udah ngajarin di GL.",
   },
 
- {
+  {
     id: "test-3",
     name: "Malika",
     role: "Student",
@@ -306,21 +297,33 @@ export const testimonials = [
   },
 ];
 
-export const activitiesData: Activity[] = [ // Terapkan tipe Activity
+export const activitiesData: Activity[] = [
   {
     id: "act-1",
-    title: "Kegiatan belajar intensif",
-    description: "Persiapan intensif untuk kompetisi akademik nasional dan internasional bersama pelatih ahli kami.",
+    title: {
+      en: "Intensive Learning Activities",
+      id: "Kegiatan Belajar Intensif",
+    },
+    description: {
+      en: "Intensive learning activities focused on academic competitions, problem-solving, and character development.",
+      id: "Kegiatan belajar intensif yang berfokus pada kompetisi akademik, pemecahan masalah, dan pengembangan karakter.",
+    },
     thumbnail: "/activities1.jpg",
     images: ["/activities1.jpg"],
     category: "intensif",
     schedule: "Setiap Sabtu, 9AM-12PM",
-    tags: ["Luring"]
+    tags: ["Luring"],
   },
   {
     id: "act-2",
-    title: "Kegiatan Belajar Daring",
-    description: "Program daring yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
+    title: {
+      en: "Online Learning Activities",
+      id: "Kegiatan Belajar Daring",
+    },
+    description: {
+      en: "Online programs focused on teamwork, problem-solving, and character development.",
+      id: "Program daring yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
+    },
     thumbnail: "/activitieszoom1.jpg",
     images: [
       "/activitieszoom1.jpg",
@@ -330,6 +333,8 @@ export const activitiesData: Activity[] = [ // Terapkan tipe Activity
     ],
     category: "Intensif zoom",
     schedule: "Tergantung jadwal",
-    tags: ["daring"]
+    tags: ["daring"],
   },
 ];
+
+export type { Activity };

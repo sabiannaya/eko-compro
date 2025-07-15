@@ -1,40 +1,41 @@
 // components/CardSlider.tsx
 "use client";
+import { LocalizedField } from "@/utils/TypeContext";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { EffectCoverflow } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 interface CardData {
   id: string;
   name?: string;
-  title: string;
-  description?: string;
-  
-  // *** CRUCIAL FIX HERE: Change 'image' to 'images' ***
-  images?: string[]; // Now consistently using 'images' (plural) and it's optional
-  thumbnail: string; // 'thumbnail' remains required for the main card image
-  
+  title: LocalizedField;
+  description?: LocalizedField;
+  images?: string[]; 
+  thumbnail: string; 
+
   position?: string;
   schedule?: string;
   category?: string;
   tags?: string[];
 }
 
-interface CardSliderData <T extends CardData = CardData> {
+interface CardSliderData<T extends CardData = CardData> {
   data: T[];
   imageHeight?: number;
   imageWidth?: number;
   slidesDesktop?: number;
   onCardClick?: (item: T) => void;
+  currentLanguage?: string;
 }
 
-const CardSlider = <T extends CardData> ({
+const CardSlider = <T extends CardData>({
   data = [],
   imageHeight = 300,
   imageWidth = 200,
   slidesDesktop = 3,
   onCardClick,
+  currentLanguage = "id",
 }: CardSliderData<T>) => {
   const cards = data.map((item, index) => (
     <SwiperSlide key={item.id || index} className="overflow-visible">
@@ -47,7 +48,7 @@ const CardSlider = <T extends CardData> ({
         >
           <Image
             src={item.thumbnail}
-            alt={item.title || item.name || "Card Image"}
+            alt={item.title[currentLanguage] || item.name || "Card Image"}
             width={imageWidth}
             height={imageHeight}
             className="rounded-lg object-cover"
@@ -55,11 +56,11 @@ const CardSlider = <T extends CardData> ({
 
           <div className="flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
-              {item.title || item.name || "Default Title"}
+              {item.title[currentLanguage] || item.name || "Default Title"}
             </h3>
             {item.description && (
               <p className="text-gray-600 text-sm text-center line-clamp-3">
-                {item.description}
+                {currentLanguage} {item.description[currentLanguage]}
               </p>
             )}
             {!item.description && item.position && (
@@ -67,7 +68,7 @@ const CardSlider = <T extends CardData> ({
                 {item.position}
               </p>
             )}
-            
+
             {item.schedule && (
               <p className="text-sm text-gray-500 mt-1">{item.schedule}</p>
             )}

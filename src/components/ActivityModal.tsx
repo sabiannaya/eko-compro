@@ -1,34 +1,32 @@
 "use client";
 
-import Image from "next/image";
+import { Activity} from "@/utils/TypeContext";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
-import { Navigation, Pagination, EffectFade } from "swiper/modules"; // Import necessary Swiper modules
+import Image from "next/image";
 import { useState } from "react";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
 
 // Definisi interface untuk props modal
 interface ActivityModalProps {
   isOpen: boolean;
   onClose: () => void;
-  activity: {
-    id: string;
-    title: string;
-    description: string;
-    images: string[];
-    thumbnail: string;
-    schedule: string;
-    category: string;
-    tags: string[];
-  } | null;
+  activity: Activity | null;
+  currentLanguage?: string;
 }
 
-const ActivityModal = ({ isOpen, onClose, activity }: ActivityModalProps) => {
+const ActivityModal = ({
+  isOpen,
+  onClose,
+  activity,
+  currentLanguage = "id",
+}: ActivityModalProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
@@ -76,7 +74,7 @@ const ActivityModal = ({ isOpen, onClose, activity }: ActivityModalProps) => {
                 <SwiperSlide key={index}>
                   <Image
                     src={imgSrc}
-                    alt={`${activity.title} image ${index + 1}`}
+                    alt={`${activity.title[currentLanguage]} image ${index + 1}`}
                     fill
                     style={{ objectFit: "cover" }}
                     className="rounded-t-lg"
@@ -97,7 +95,7 @@ const ActivityModal = ({ isOpen, onClose, activity }: ActivityModalProps) => {
             <div className="relative w-full h-80 sm:h-[40vh] flex-shrink-0 overflow-hidden rounded-t-lg">
               <Image
                 src={activity.thumbnail}
-                alt={activity.title}
+                alt={activity.title[currentLanguage]}
                 fill
                 className="object-cover rounded-t-lg"
               />
@@ -111,7 +109,7 @@ const ActivityModal = ({ isOpen, onClose, activity }: ActivityModalProps) => {
         {/* Content Section - Scrollable */}
         <div className="flex-1 overflow-y-scroll p-6 sm:p-8">
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-            {activity.title}
+            {activity.title[currentLanguage]}
           </h3>
           <div className="flex items-center gap-2 text-gray-600 mb-4">
             <svg
@@ -138,16 +136,23 @@ const ActivityModal = ({ isOpen, onClose, activity }: ActivityModalProps) => {
                 !isExpanded ? "line-clamp-2" : ""
               }`}
             >
-              {activity.description}
+              {activity.description[currentLanguage]}
             </p>
 
             {/* Check if description is long enough to need truncation */}
-            {activity.description.split(" ").length > 20 && (
+            {(activity.description[currentLanguage]?.split(" ").length ?? 0) >
+              20 && (
               <button
                 onClick={toggleDescription}
                 className="text-blue-600 hover:text-blue-800 text-sm font-medium mt-2 transition-colors duration-200 cursor-pointer"
               >
-                {isExpanded ? "Read less..." : "Read more..."}
+                {isExpanded
+                  ? currentLanguage === "id"
+                    ? "Baca sedikit..."
+                    : "Read less..."
+                  : currentLanguage === "id"
+                  ? "Baca selengkapnya..."
+                  : "Read more..."}
               </button>
             )}
           </div>

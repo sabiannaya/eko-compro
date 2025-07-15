@@ -1,5 +1,6 @@
 import "./globals.css";
 import PageTransition from "@/components/PageTransition";
+
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +13,7 @@ export default function RootLayout({
         <link rel="icon" href="/Logo.png" />
       </head>
       <body className="font-sans antialiased">
-        <PageTransition>{children}</PageTransition>
+          <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
