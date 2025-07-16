@@ -1,4 +1,14 @@
-import { Activity, ProgramData, StaffData } from "@/utils/TypeContext"; // Impor tipe data dari types.ts
+import { Activity, ProgramData, StaffData, HeroContent } from "@/utils/TypeContext"; // Impor tipe data dari types.ts
+
+export const heroContent: HeroContent = {
+  title: "MR. EKO Guidance Learning",
+  shine: "SHINE: Cerdas – Berhati – Individu dengan – Etika Mulia",
+  subtitle: "Pikiran Cemerlang dengan Nilai Mendalam",
+  description: {
+    id: "Guidance Learning Mr. Eko merupakan lembaga bimbingan belajar yang telah berdiri sejak tahun 2017, dengan komitmen untuk menjadi mitra belajar terbaik bagi siswa dalam mencapai prestasi akademik dan pembentukan karakter.",
+    en: "Guidance Learning Mr. Eko is a tutoring institution established in 2017, committed to being the best learning partner for students in achieving academic excellence and character development.",
+  },
+};
 
 export const programData: ProgramData[] = [
   {

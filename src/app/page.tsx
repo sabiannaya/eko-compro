@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import LanguageToggle from "@/components/LanguageToggle"; 
 import { CalendarIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { Activity, HeroContent } from "@/utils/TypeContext"; 
+import { Activity } from "@/utils/TypeContext"; 
 
 import {
   activitiesData,
@@ -17,24 +17,14 @@ import {
   teachingMethods,
   testimonials,
   staffData,
+  heroContent,
 } from "@/data/dummy";
-
-export const heroContent: HeroContent = {
-  title: "MR. EKO Guidance Learning",
-  shine: "SHINE: Cerdas – Berhati – Individu dengan – Etika Mulia",
-  subtitle: "Pikiran Cemerlang dengan Nilai Mendalam",
-  description: {
-    id: "Guidance Learning Mr. Eko merupakan lembaga bimbingan belajar yang telah berdiri sejak tahun 2017, dengan komitmen untuk menjadi mitra belajar terbaik bagi siswa dalam mencapai prestasi akademik dan pembentukan karakter.",
-    en: "Guidance Learning Mr. Eko is a tutoring institution established in 2017, committed to being the best learning partner for students in achieving academic excellence and character development.",
-  },
-};
 
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(
     null
   );
-
 
   useEffect(() => {
     if (showModal) {
