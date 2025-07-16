@@ -5,10 +5,10 @@ import TestimonialsFade from "@/components/TestimonialsFade";
 import Image from "next/image";
 import ActivityModal from "@/components/ActivityModal";
 import Footer from "@/components/Footer";
-import LanguageToggle from "@/components/LanguageToggle"; 
 import { CalendarIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { Activity } from "@/utils/TypeContext"; 
+import { Activity } from "@/utils/TypeContext";
+import { useLanguage } from "@/utils/LanguageContext";
 
 import {
   activitiesData,
@@ -17,14 +17,24 @@ import {
   teachingMethods,
   testimonials,
   staffData,
-  heroContent,
 } from "@/data/dummy";
+
+import {
+  heroContent,
+  programs as programSection,
+  methods as methodsSection,
+  facilities as facilitiesSection,
+  staffs as staffSection,
+  testimonials as testimonialsSection,
+  activities as activitiesSection,
+} from "@/data/sections";
 
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(
     null
   );
+  const { currentLanguage } = useLanguage();
 
   useEffect(() => {
     if (showModal) {
@@ -47,12 +57,6 @@ export default function HomePage() {
   const closeModal = () => {
     setShowModal(false);
     setSelectedActivity(null);
-  };
-
-  const [currentLanguage, setCurrentLanguage] = useState("id");
-
-  const handleLanguageChange = (language: string) => {
-    setCurrentLanguage(language);
   };
 
   return (
@@ -103,10 +107,11 @@ export default function HomePage() {
         {/* Programs Section */}
         <section className="pt-16 flex flex-col gap-2 sm:px-10">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800">Our Programs</h2>
+            <h2 className="text-3xl font-bold text-gray-800">
+              {programSection.title[currentLanguage]}
+            </h2>
             <p className="text-gray-600 mx-auto">
-              Explore our diverse range of programs designed to enhance learning
-              and character development.
+              {programSection.description[currentLanguage]}
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden">
@@ -118,11 +123,10 @@ export default function HomePage() {
         <section className="px-5 flex flex-col gap-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              How We Teach
+              {methodsSection.title[currentLanguage]}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our proven teaching methodologies designed to maximize student
-              learning and engagement.
+              {methodsSection.description[currentLanguage]}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,17 +147,17 @@ export default function HomePage() {
                   <div className="flex flex-col items-center text-center">
                     <div className="relative w-16 h-16 mb-4">
                       <Image
-                        src={method.icon}
-                        alt={method.title}
+                        src={method.thumbnail}
+                        alt={method.title[currentLanguage]}
                         fill
                         className="object-contain"
                       />
                     </div>
                     <h3 className="font-semibold text-lg mb-3 text-gray-800">
-                      {method.title}
+                      {method.title[currentLanguage]}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      {method.description}
+                      {method.description[currentLanguage]}
                     </p>
                   </div>
                 </div>
@@ -165,9 +169,11 @@ export default function HomePage() {
         {/* Staff Section */}
         <section className="px-5 flex flex-col gap-2">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              {staffSection.title[currentLanguage]}
+            </h2>
             <p className="text-gray-600 mx-auto">
-              Meet our dedicated team of experienced educators and mentors.
+              {staffSection.description[currentLanguage]}
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden">
@@ -185,11 +191,10 @@ export default function HomePage() {
         <section className="px-5 flex flex-col gap-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Learning Facilities
+              {facilitiesSection.title[currentLanguage]}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive facilities and resources for every educational
-              level.
+              {facilitiesSection.description[currentLanguage]}
             </p>
           </div>
           <div className="bg-white rounded-2xl shadow-lg px-5">
@@ -205,7 +210,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 ">
                   <div className="lg:col-span-1">
                     <h3 className="text-2xl font-semibold text-gray-800">
-                      {level.title}
+                      {level.title[currentLanguage]}
                     </h3>
                   </div>
                   <div className="lg:col-span-2">
@@ -217,14 +222,14 @@ export default function HomePage() {
                         >
                           <div className="relative w-12 h-12 flex-shrink-0">
                             <Image
-                              src={facility.image}
+                              src={facility.thumbnail}
                               alt={`Facility ${facilityIndex + 1}`}
                               fill
                               className="object-contain"
                             />
                           </div>
                           <p className="text-gray-700 leading-relaxed">
-                            {facility.content}
+                            {facility.description[currentLanguage]}
                           </p>
                         </li>
                       ))}
@@ -240,11 +245,10 @@ export default function HomePage() {
         <section className="w-full px-5 flex flex-col items-center justify-center gap-2">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              What Our Students Say
+              {testimonialsSection.title[currentLanguage]}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Real experiences from our students and their learning journey with
-              us.
+              {testimonialsSection.description[currentLanguage]}
             </p>
           </div>
           <div className="w-full sm:w-2/3 mx-auto">
@@ -256,12 +260,12 @@ export default function HomePage() {
         <section className="px-5 flex flex-col gap-8 py-12 bg-gradient-to-b ">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-3 relative inline-block">
-              Our Activities
+              {activitiesSection.title[currentLanguage]}
+
               <span className="absolute bottom-0 left-0 w-full h-1 transform scale-x-75 -translate-y-1"></span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Engaging activities designed to enhance learning, teamwork, and
-              character development.
+              {activitiesSection.description[currentLanguage]}
             </p>
           </div>
 
@@ -306,14 +310,11 @@ export default function HomePage() {
         </section>
       </div>
 
-      <Footer />
+      <Footer currentLanguage={currentLanguage} />
       <ActivityModal
         isOpen={showModal}
         onClose={closeModal}
         activity={selectedActivity}
-      />
-      <LanguageToggle
-        onLanguageChange={handleLanguageChange}
         currentLanguage={currentLanguage}
       />
     </div>

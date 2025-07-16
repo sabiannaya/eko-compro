@@ -1,16 +1,14 @@
-import { Activity, ProgramData, StaffData, HeroContent } from "@/utils/TypeContext"; // Impor tipe data dari types.ts
+import {
+  Activity,
+  ProgramInterface,
+  StaffInterface,
+  teachingMethodsInterface,
+  facilitiesInterface,
+  
+} from "@/utils/TypeContext"; // Impor tipe Interface dari types.ts
 
-export const heroContent: HeroContent = {
-  title: "MR. EKO Guidance Learning",
-  shine: "SHINE: Cerdas – Berhati – Individu dengan – Etika Mulia",
-  subtitle: "Pikiran Cemerlang dengan Nilai Mendalam",
-  description: {
-    id: "Guidance Learning Mr. Eko merupakan lembaga bimbingan belajar yang telah berdiri sejak tahun 2017, dengan komitmen untuk menjadi mitra belajar terbaik bagi siswa dalam mencapai prestasi akademik dan pembentukan karakter.",
-    en: "Guidance Learning Mr. Eko is a tutoring institution established in 2017, committed to being the best learning partner for students in achieving academic excellence and character development.",
-  },
-};
 
-export const programData: ProgramData[] = [
+export const programData: ProgramInterface[] = [
   {
     id: "prog-1",
     title: {
@@ -37,7 +35,7 @@ export const programData: ProgramData[] = [
   },
 ];
 
-export const staffData: StaffData[] = [
+export const staffData: StaffInterface[] = [
   // Terapkan tipe StaffData
   {
     id: "staff-1",
@@ -113,110 +111,190 @@ export const staffData: StaffData[] = [
   },
 ];
 
-export const teachingMethods = [
+export const teachingMethods: teachingMethodsInterface[] = [
   {
     id: "tm-1",
-    icon: "/Logo.png",
-    title: "Private & Group Classes",
-    description:
-      "Flexible learning options with both private and group sessions tailored to individual needs.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Private & Group Classes",
+      id: "Kelas Privat & Kelompok",
+    },
+    description: {
+      en: "Flexible learning options with both private and group sessions tailored to individual needs.",
+      id: "Pilihan belajar fleksibel dengan sesi privat dan kelompok yang disesuaikan dengan kebutuhan individu.",
+    },
   },
   {
     id: "tm-2",
-    icon: "/Logo.png",
-    title: "Contextual Learning",
-    description:
-      "Connecting academic concepts to real-world applications for enhanced understanding.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Contextual Learning",
+      id: "Pembelajaran Kontekstual",
+    },
+    description: {
+      en: "Connecting academic concepts to real-world applications for enhanced understanding.",
+      id: "Menghubungkan konsep akademik dengan aplikasi dunia nyata untuk pemahaman yang lebih baik.",
+    },
   },
   {
     id: "tm-3",
-    icon: "/Logo.png",
-    title: "Cooperative & Scientific Learning",
-    description:
-      "Collaborative problem-solving and inquiry-based learning methodologies.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Cooperative & Scientific Learning",
+      id: "Pembelajaran Kooperatif & Saintifik",
+    },
+    description: {
+      en: "Collaborative problem-solving and inquiry-based learning methodologies.",
+      id: "Metodologi pembelajaran berbasis kolaborasi pemecahan masalah dan penyelidikan.",
+    },
   },
   {
     id: "tm-4",
-    icon: "/Logo.png",
-    title: "Project-Based Learning",
-    description:
-      "Hands-on projects that develop practical skills and creative thinking.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Project-Based Learning",
+      id: "Pembelajaran Berbasis Proyek",
+    },
+    description: {
+      en: "Hands-on projects that develop practical skills and creative thinking.",
+      id: "Proyek praktis yang mengembangkan keterampilan praktis dan pemikiran kreatif.",
+    },
   },
   {
     id: "tm-5",
-    icon: "/Logo.png",
-    title: "Intensive Practice",
-    description:
-      "Structured repetition and practice sessions to reinforce key concepts.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Intensive Practice",
+      id: "Latihan Intensif",
+    },
+    description: {
+      en: "Structured repetition and practice sessions to reinforce key concepts.",
+      id: "Sesi pengulangan dan latihan terstruktur untuk memperkuat konsep kunci.",
+    },
   },
   {
     id: "tm-6",
-    icon: "/Logo.png",
-    title: "Critical Thinking",
-    description:
-      "Focus on concept understanding and analytical problem-solving skills.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Critical Thinking",
+      id: "Pemikiran Kritis",
+    },
+    description: {
+      en: "Focus on concept understanding and analytical problem-solving skills.",
+      id: "Fokus pada pemahaman konsep dan keterampilan pemecahan masalah analitis.",
+    },
   },
   {
     id: "tm-7",
-    icon: "/Logo.png",
-    title: "Hybrid Learning",
-    description:
-      "Seamless integration of online and offline learning experiences.",
+    thumbnail: "/Logo.png",
+    title: {
+      en: "Hybrid Learning",
+      id: "Pembelajaran Hibrid",
+    },
+    description: {
+      en: "Seamless integration of online and offline learning experiences.",
+      id: "Integrasi seamless dari pengalaman belajar online dan offline.",
+    },
   },
 ];
 
-export const facilitiesData = [
+export const facilitiesData: facilitiesInterface[] = [
   {
     id: "fac-1",
-    title: "Elementary School",
+    title: {
+      en: "Elementary School",
+      id: "Sekolah Dasar",
+    },
     facilities: [
       {
         id: "fac-1-sub-1",
-        content:
-          "Comprehensive study guides and modules for Science, Mathematics, Indonesian Language, and Thematic learning",
-        image: "/Logo.png",
+        title: {
+          en: "Comprehensive Study Guides",
+          id: "Panduan Belajar Komprehensif",
+        },
+        description: {
+          en: "Comprehensive study guides and modules for Science, Mathematics, Indonesian Language, and Thematic learning",
+          id: "Panduan dan modul belajar komprehensif untuk IPA, Matematika, Bahasa Indonesia, dan pembelajaran Tematik",
+        },
+        thumbnail: "/Logo.png",
       },
       {
         id: "fac-1-sub-2",
-        content:
-          "Extensive practice test collections for School Exams (US) and National Assessment (AN) with special preparation for 6th grade",
-        image: "/Logo.png",
+        title: {
+          en: "Practice Test Collections",
+          id: "Kumpulan Soal Latihan",
+        },
+        description: {
+          en: "Extensive practice test collections for School Exams (US) and National Assessment (AN) with special preparation for 6th grade",
+          id: "Kumpulan soal latihan untuk Ujian Sekolah (US) dan Asesmen Nasional (AN) dengan persiapan khusus kelas 6",
+        },
+        thumbnail: "/Logo.png",
       },
     ],
   },
   {
     id: "fac-2",
-    title: "Junior High School",
+    title: {
+      en: "Junior High School",
+      id: "Sekolah Menengah Pertama",
+    },
     facilities: [
       {
         id: "fac-2-sub-1",
-        content:
-          "Detailed study modules for Science, Mathematics, Indonesian Language, and English",
-        image: "/Logo.png",
+        title: {
+          en: "Detailed Study Modules",
+          id: "Modul Belajar Detail",
+        },
+        description: {
+          en: "Detailed study modules for Science, Mathematics, Indonesian Language, and English",
+          id: "Modul belajar detail untuk IPA, Matematika, Bahasa Indonesia, dan Bahasa Inggris",
+        },
+        thumbnail: "/Logo.png",
       },
       {
         id: "fac-2-sub-2",
-        content:
-          "Complete practice test books for School Exams and Academic Ability Tests, plus pocket formula guides for 9th grade students",
-        image: "/Logo.png",
+        title: {
+          en: "Practice Test Books & Formula Guides",
+          id: "Buku Soal Latihan & Panduan Rumus",
+        },
+        description: {
+          en: "Complete practice test books for School Exams and Academic Ability Tests, plus pocket formula guides for 9th grade students",
+          id: "Buku soal latihan lengkap untuk ujian sekolah dan tes kemampuan akademik, serta panduan rumus saku untuk siswa kelas 9",
+        },
+        thumbnail: "/Logo.png",
       },
       {
         id: "fac-2-sub-3",
-        content:
-          "Accelerated learning program (3 years condensed into 2 years)",
-        image: "/Logo.png",
+        title: {
+          en: "Accelerated Learning Program",
+          id: "Program Belajar Akselerasi",
+        },
+        description: {
+          en: "Accelerated learning program (3 years condensed into 2 years)",
+          id: "Program belajar akselerasi (3 tahun dipadatkan menjadi 2 tahun)",
+        },
+        thumbnail: "/Logo.png",
       },
     ],
   },
   {
     id: "fac-3",
-    title: "Senior High School",
+    title: {
+      en: "Senior High School",
+      id: "Sekolah Menengah Atas",
+    },
     facilities: [
       {
         id: "fac-3-sub-1",
-        content:
-          "Advanced study guides for Science subjects (Biology, Chemistry, Physics) and Mathematics (Core and Specialization tracks)",
-        image: "/Logo.png",
+        title: {
+          en: "Advanced Study Guides",
+          id: "Panduan Belajar Lanjutan",
+        },
+        description: {
+          en: "Advanced study guides for Science subjects (Biology, Chemistry, Physics) and Mathematics (Core and Specialization tracks)",
+          id: "Panduan belajar lanjutan untuk mata pelajaran IPA (Biologi, Kimia, Fisika) dan Matematika (peminatan dan wajib)",
+        },
+        thumbnail: "/Logo.png",
       },
     ],
   },

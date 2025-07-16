@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { navItems, legalItems } from "@/data/navigation";
 
-const Footer = () => {
+const Footer = ({
+  currentLanguage = "id"
+}) => {
   return (
     <footer className="bg-white border-t border-gray-200 shadow-inner">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col gap-8">
@@ -11,19 +14,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-800">Quick Links</h3>
             <nav>
               <ul className="space-y-3">
-                {[
-                  { href: "/", label: "Home" },
-                  { href: "/about", label: "About Us" },
-                  { href: "/program", label: "Our Program" },
-                  { href: "/legal", label: "Legal" },
-                  { href: "/contact", label: "Contact Us" },
-                ].map((item) => (
+                {navItems.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
                     >
-                      {item.label}
+                      {item.title[currentLanguage]}
                     </Link>
                   </li>
                 ))}
@@ -36,17 +33,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-800">Legal</h3>
             <nav>
               <ul className="space-y-3">
-                {[
-                  { href: "/privacy-policy", label: "Privacy Policy" },
-                  { href: "/terms-of-service", label: "Terms of Service" },
-                  { href: "/cookie-policy", label: "Cookie Policy" },
-                ].map((item) => (
+                {legalItems.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
                     >
-                      {item.label}
+                      {item.title[currentLanguage]}
                     </Link>
                   </li>
                 ))}

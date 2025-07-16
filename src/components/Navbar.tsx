@@ -3,10 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/utils/LanguageContext";
+import { navItems } from "@/data/navigation";
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { currentLanguage, setCurrentLanguage } = useLanguage();
 
   // Close sidebar when route changes
   useEffect(() => {
@@ -50,40 +54,30 @@ const Navbar: React.FC = () => {
         </span>
 
         {/* Desktop Navigation */}
-        <div className="hidden sm:flex-grow sm:flex sm:justify-center">
+        <div className="hidden sm:flex-grow sm:flex sm:justify-center sm:items-center">
           {/* Changed space-x-4 to space-x-8 for more spacing */}
           <ul className="flex space-x-16 text-gray-600">
-            <li>
-              <Link
-                href="/"
-                className={`hover:text-gray-800 hover:font-semibold  ${
-                  pathname === "/" ? "font-semibold" : ""
-                }`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className={`hover:text-gray-800 hover:font-semibold  ${
-                  pathname === "/about" ? "font-semibold" : ""
-                }`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className={`hover:text-gray-800 hover:font-semibold  ${
-                  pathname === "/contact" ? "font-semibold" : ""
-                }`}
-              >
-                Contact
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`hover:text-gray-800 hover:font-semibold ${
+                    pathname === item.href ? "font-semibold" : ""
+                  }`}
+                >
+                  {item.title[currentLanguage]}
+                </Link>
+              </li>
+            ))}
           </ul>
+        </div>
+
+        {/* Desktop Language Toggle */}
+        <div className="hidden sm:block">
+          <LanguageToggle
+            onLanguageChange={setCurrentLanguage}
+            currentLanguage={currentLanguage}
+          />
         </div>
 
         {/* Mobile Hamburger Menu */}
@@ -151,43 +145,29 @@ const Navbar: React.FC = () => {
         {/* Sidebar Navigation */}
         <nav className="p-4">
           <ul className="space-y-4">
-            <li>
-              <Link
-                href="/"
-                className={`block py-3 px-4 rounded-md transition-colors ${
-                  pathname === "/"
-                    ? "bg-gray-100 font-semibold text-gray-900"
-                    : "text-gray-800 hover:bg-gray-50 hover:text-gray-900"
-                }`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className={`block py-3 px-4 rounded-md transition-colors ${
-                  pathname === "/about"
-                    ? "bg-gray-100 font-semibold text-gray-900"
-                    : "text-gray-800 hover:bg-gray-50 hover:text-gray-900"
-                }`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className={`block py-3 px-4 rounded-md transition-colors ${
-                  pathname === "/contact"
-                    ? "bg-gray-100 font-semibold text-gray-900"
-                    : "text-gray-800 hover:bg-gray-50 hover:text-gray-900"
-                }`}
-              >
-                Contact
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`block text-gray-600 hover:text-gray-800 hover:font-semibold ${
+                    pathname === item.href ? "font-semibold" : ""
+                  }`}
+                  onClick={closeSidebar}
+                >
+                  {item.title[currentLanguage]}
+                </Link>
+              </li>
+            ))}
           </ul>
+
+          {/* Mobile Language Toggle */}
+          <div className="pt-4">
+            {/* <h3 className="text-sm font-medium text-gray-700 mb-3">Language</h3> */}
+            <LanguageToggle
+              onLanguageChange={setCurrentLanguage}
+              currentLanguage={currentLanguage}
+            />
+          </div>
         </nav>
       </div>
     </>

@@ -11,18 +11,36 @@ export interface HeroContent {
   subtitle: string;
 }
 
-export interface ProgramData {
+export interface ProgramInterface {
   id: string;
   title: LocalizedField;
   description: LocalizedField;
   thumbnail: string;
 }
 
-export interface StaffData {
+export interface StaffInterface {
   id: string;
   title: LocalizedField;
   description: LocalizedField;
   thumbnail: string;
+}
+
+export interface teachingMethodsInterface {
+  id: string;
+  title: LocalizedField;
+  description: LocalizedField;
+  thumbnail: string;
+}
+
+export interface facilitiesInterface {
+  id: string;
+  title: LocalizedField;
+  facilities: {
+    id: string;
+    title: LocalizedField;
+    description: LocalizedField;
+    thumbnail: string;
+  }[];
 }
 
 export type Activity = {
