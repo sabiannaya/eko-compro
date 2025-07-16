@@ -257,7 +257,7 @@ export default function HomePage() {
         </section>
 
         {/* Activities Section */}
-        <section className="px-5 flex flex-col gap-8 py-12 bg-gradient-to-b ">
+        <section className="px-5 flex flex-col gap-8 pb-8 bg-gradient-to-b ">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-3 relative inline-block">
               {activitiesSection.title[currentLanguage]}
