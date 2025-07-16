@@ -313,24 +313,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          {/* Mobile Carousel
-          <div className="md:hidden px-2">
-            <CardSlider
-              data={activitiesData} //
-              onCardClick={openModal}
-            />
-          </div> */}
         </section>
-
-        {/* <section className="overflow-hidden">
-          <MarqueeImageLeft
-            images={["/Logo.png"]}
-            speed={36}
-            imageHeight={96}
-            imageWidth={128}
-          />
-        </section> */}
       </div>
 
       <Footer />
