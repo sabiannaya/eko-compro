@@ -3,15 +3,12 @@
 import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
 import Image from "next/image";
-// import MarqueeText from "@/components/MarqueeText";
-// import MarqueeImageLeft from "@/components/MarqueeImageLeft";
-// import Activities from "@/components/activities";
 import ActivityModal from "@/components/ActivityModal";
 import Footer from "@/components/Footer";
-import LanguageToggle from "@/components/LanguageToggle"; // Import the LanguageToggle component
+import LanguageToggle from "@/components/LanguageToggle"; 
 import { CalendarIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { Activity, HeroContent } from "@/utils/TypeContext"; // Impor tipe data Activity dari types.ts
+import { Activity, HeroContent } from "@/utils/TypeContext"; 
 
 import {
   activitiesData,

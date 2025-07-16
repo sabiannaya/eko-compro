@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 interface LanguageToggleProps {
   onLanguageChange: (language: string) => void;
   currentLanguage: string;

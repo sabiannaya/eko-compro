@@ -13,7 +13,6 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Definisi interface untuk props modal
 interface ActivityModalProps {
   isOpen: boolean;
   onClose: () => void;

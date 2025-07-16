@@ -11,7 +11,6 @@ interface ActivitiesSectionProps {
 
 export default function ActivitiesSection({
   activities,
-  onCardClick,
   currentLanguage = "id",
 }: ActivitiesSectionProps) {
   return (
@@ -19,22 +18,6 @@ export default function ActivitiesSection({
       {/* Mobile Carousel - Updated for Swiper */}
       <div className="md:hidden px-2">
         <CardSlider data={activities} currentLanguage={currentLanguage} />
-        {/* <CardSlider
-          data={activities.map((activity) => ({
-            id: activity.id,
-            title: activity.title[currentLanguage],
-            description: activity.description[currentLanguage],
-            thumbnail: activity.thumbnail,
-            images: activity.images,
-            schedule: activity.schedule,
-            category: activity.category,
-            tags: activity.tags,
-          }))}
-          imageHeight={200}
-          imageWidth={300}
-          slidesDesktop={1}
-          onCardClick={onCardClick}
-        /> */}
       </div>
     </section>
   );
