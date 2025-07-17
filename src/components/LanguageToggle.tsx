@@ -34,7 +34,7 @@ export default function LanguageToggle({
     <div className="relative">
       <button
         type="button"
-        className="flex items-center space-x-2 px-3 py-2 bg-teal-200 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition-all duration-200 min-w-[80px]"
+        className="flex items-center space-x-2 px-3 py-2 bg-slate-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition-all duration-200 min-w-[80px]"
         onClick={() => setOpen(!open)}
         aria-haspopup="listbox"
         aria-expanded={open}

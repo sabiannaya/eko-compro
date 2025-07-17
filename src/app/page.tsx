@@ -201,7 +201,7 @@ export default function HomePage() {
             {facilitiesData.map((level, index) => (
               <div
                 key={index}
-                className={`p-5 ${
+                className={`p-6 ${
                   index < facilitiesData.length - 1
                     ? "border-b border-gray-200"
                     : ""
@@ -218,7 +218,7 @@ export default function HomePage() {
                       {level.facilities.map((facility, facilityIndex) => (
                         <li
                           key={facilityIndex}
-                          className="flex flex-row items-center gap-3"
+                          className="flex flex-row items-center gap-3 mb-4"
                         >
                           <div className="relative w-12 h-12 flex-shrink-0">
                             <Image

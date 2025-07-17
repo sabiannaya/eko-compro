@@ -25,6 +25,24 @@ body {
   background: #f59e0b;
 }
 
+/* .cardSlider .swiper-pagination {
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-dynamic-bullets-min-size: 8px;
+  --swiper-pagination-dynamic-bullets-max-size: 8px;
+  --swiper-pagination-dynamic-size: 6;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+}
+
+.cardSlider .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cardSlider .swiper-pagination-bullet-active {
+  background: #3b82f6;
+} */
+
 
 /* Marquee Animation */
 @keyframes marquee {
