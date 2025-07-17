@@ -43,7 +43,7 @@ const CardSlider = <T extends CardData>({
         <div
           className="flex flex-col gap-5 p-5 items-center justify-between bg-white rounded-lg shadow-sm
           transition-all duration-300 hover:scale-105 hover:z-10 active:scale-105
-          origin-center relative group cursor-pointer min-h-[400px] 2xl:min-h-[375px] h-full"
+          origin-center relative group cursor-pointer h-full"
           onClick={() => onCardClick && onCardClick(item)}
         >
           <Image
