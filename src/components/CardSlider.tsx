@@ -5,7 +5,6 @@ import Image from "next/image";
 import "swiper/css";
 import { EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useRef, useState } from "react";
 
 interface CardData {
   id: string;
