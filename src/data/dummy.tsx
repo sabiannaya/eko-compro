@@ -12,24 +12,72 @@ export const programData: ProgramInterface[] = [
   {
     id: "prog-1",
     title: {
-      en: "Intensive Learning Program",
-      id: "Program Belajar Intensif",
+      en: "Merdeka Curriculum",
+      id: "Kurikulum Merdeka",
     },
     description: {
-      en: "A comprehensive program designed to prepare students for national and international academic competitions through focused training sessions.",
-      id: "Program komprehensif yang dirancang untuk mempersiapkan siswa menghadapi kompetisi akademik nasional dan internasional melalui sesi pelatihan yang terfokus.",
+      en: "Deep Learning Approach",
+      id: "Pendekatan Pembelajaran Deep Learning",
     },
     thumbnail: "/Logo.png",
   },
   {
     id: "prog-2",
     title: {
-      en: "Regular Learning Program",
-      id: "Program Belajar Reguler",
+      en: "International Curriculum",
+      id: "Kurikulum Internasional",
     },
     description: {
-      en: "A structured learning program that emphasizes teamwork, problem-solving, and character development through regular sessions.",
-      id: "Program pembelajaran terstruktur yang menekankan kerja sama tim, pemecahan masalah, dan pengembangan karakter melalui sesi reguler.",
+      en: "A structured learning program that emphasizes teamwork, problem-solving, and character development through International sessions.",
+      id: "Program pembelajaran terstruktur yang menekankan kerja sama tim, pemecahan masalah, dan pengembangan karakter melalui sesi Internasional.",
+    },
+    thumbnail: "/Logo.png",
+  },
+  {
+    id: "prog-3",
+    title: {
+      en: "Intensive Program",
+      id: "Program Intensif",
+    },
+    description: {
+      en: "A comprehensive learning program designed to prepare students for various assessments, including UH Assessment, ASAT, Religious Exams, US, and UN/TKA.",
+      id: "Program pembelajaran untuk menghadapi UH Assesment, ASAT, Ujian Keagamaan, US, UN/TKA",
+    },
+    thumbnail: "/Logo.png",
+  },
+    {
+    id: "prog-4",
+    title: {
+      en: "Regular Tryouts",
+      id: "Tryout Rutin",
+    },
+    description: {
+      en: "This program is designed to help you measure and improve your abilities regularly, ensuring you stay on track towards success.",
+      id: "Program ini dirancang khusus untuk membantumu mengukur dan meningkatkan kemampuan secara berkala, memastikan kamu selalu berada di jalur yang tepat menuju kesuksesan.",
+    },
+    thumbnail: "/Logo.png", 
+  },
+    {
+    id: "prog-5",
+    title: {
+      en: "Admissions Preparation Program for Junior/Senior High School",
+      id: "Bimbingan Seleksi Masuk SMP/SMA",
+    },
+    description: {
+      en: "This program is designed to help students succeed in the competitive entrance exams for top junior and senior high schools, offering comprehensive and adaptive preparation.",
+      id: "Program bimbingan ini dirancang untuk membantu siswa sukses lolos seleksi masuk SMP dan SMA favorit. Menyadari ketatnya persaingan, program ini menawarkan persiapan yang komprehensif dan adaptif.",
+    },
+    thumbnail: "/Logo.png",
+  },
+  {
+    id: "prog-6",
+    title: {
+      en: "Accelerated Learning Program (Junior High School Level)",
+      id: "Program percepatan materi/Akselerasi (Tingkat SMP)",
+    },
+    description: {
+      en: "This program is designed for high-potential junior high school students who want to optimize their academic abilities and absorb material more quickly. The focus is on strong concept mastery and critical thinking development, not just speed.",
+      id: "Program Percepatan Materi/Akselerasi ini didesain untuk siswa SMP berpotensi tinggi yang ingin mengoptimalkan kemampuan akademiknya dan menyerap materi lebih cepat. Fokusnya adalah penguasaan konsep yang kuat dan pengembangan berpikir kritis, bukan hanya kecepatan.",
     },
     thumbnail: "/Logo.png",
   },
@@ -80,8 +128,8 @@ export const staffData: StaffInterface[] = [
       id: "Jinan Kautsar Syifa Sulaksono, S.K.M",
     },
     description: {
-      en: "Tutor - Mathematics",
-      id: "Tutor - Matematika",
+      en: "Tutor - Mathematics & Biology",
+      id: "Tutor - Matematika & Biologi",
     },
     thumbnail: "/Logo.png",
   },
@@ -92,20 +140,20 @@ export const staffData: StaffInterface[] = [
       id: "Muhammad Fauzi Zaydan Rizqullah Sulaksono",
     },
     description: {
-      en: "Tutor - Physics & Chemistry",
-      id: "Tutor - Fisika & Kimia",
+      en: "Finance",
+      id: "Staff Keuangan",
     },
     thumbnail: "/Logo.png",
   },
   {
     id: "staff-6",
     title: {
-      en: "Rizky Muhammad Mufti Firdaus Sulaksono",
-      id: "Rizky Muhammad Mufti Firdaus Sulaksono",
+      en: "Muhammad Mufti Firdaus Sulaksono",
+      id: "Muhammad Mufti Firdaus Sulaksono",
     },
     description: {
-      en: "Tutor - Biology & Mathematics",
-      id: "Tutor - Biologi & Matematika",
+      en: "Administration",
+      id: "Tata Usaha",
     },
     thumbnail: "/Logo.png",
   },
