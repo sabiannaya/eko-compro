@@ -1,3 +1,16 @@
+export interface MultiLanguageText {
+  en: string;
+  id: string;
+}
+
+export interface PageMetadata {
+  title: MultiLanguageText;
+  description: MultiLanguageText;
+  keywords?: MultiLanguageText;
+}
+
+export type SupportedLanguage = keyof MultiLanguageText;
+
 export type LocalizedField = {
   en: string;
   id: string;

@@ -59,7 +59,7 @@ const CardSlider = <T extends CardData>({
               {item.title[currentLanguage] || item.name || "Default Title"}
             </h3>
             {item.description && (
-              <p className="text-gray-600 text-sm text-center line-clamp-3">
+              <p className="text-gray-600 text-sm text-center">
                 {item.description[currentLanguage]}
               </p>
             )}
