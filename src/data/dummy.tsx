@@ -27,7 +27,7 @@ export const programData: ProgramInterface[] = [
     },
     description: {
       en: "Additional learning programs tailored to bilingual school curricula or those using international curricula, such as the ongoing Cambridge International Curriculum.",
-      id: "Program pembelajaran tambahan yang disesuaikan dengan kurikulum sekolah bilingual atau yang menggunakan kurikulum internasional, seperti yang sudah berjalan yaituCambridge International Curriculum.",
+      id: "Program pembelajaran tambahan yang disesuaikan dengan kurikulum sekolah bilingual atau yang menggunakan kurikulum internasional, seperti yang sudah berjalan yaitu Cambridge International Curriculum.",
     },
     thumbnail: "/Logo.png",
   },
