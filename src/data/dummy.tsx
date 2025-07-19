@@ -14,8 +14,8 @@ export const programData: ProgramInterface[] = [
       id: "Kurikulum Merdeka",
     },
     description: {
-      en: "Deep Learning Approach",
-      id: "Pendekatan Pembelajaran Deep Learning",
+      en: "The learning curriculum is tailored based on the USBN SKL of the Education Office with the current applicable curriculum (Merdeka Curriculum) using a Deep Learning approach.",
+      id: "Kurikulum pembelajaran disesuaikan berdasarkan SKL USBN Dinas Pendidikan dengan kurikulum yang berlaku saat ini (Kurikulum Merdeka) dengan pendekatan pembelajaran Deep Learning.",
     },
     thumbnail: "/Logo.png",
   },
@@ -26,8 +26,8 @@ export const programData: ProgramInterface[] = [
       id: "Kurikulum Internasional",
     },
     description: {
-      en: "A structured learning program that emphasizes teamwork, problem-solving, and character development through International sessions.",
-      id: "Program pembelajaran terstruktur yang menekankan kerja sama tim, pemecahan masalah, dan pengembangan karakter melalui sesi Internasional.",
+      en: "Additional learning programs tailored to bilingual school curricula or those using international curricula, such as the ongoing Cambridge International Curriculum.",
+      id: "Program pembelajaran tambahan yang disesuaikan dengan kurikulum sekolah bilingual atau yang menggunakan kurikulum internasional, seperti yang sudah berjalan yaitu, <i>Cambridge International Curriculum.</i>",
     },
     thumbnail: "/Logo.png",
   },
@@ -38,8 +38,8 @@ export const programData: ProgramInterface[] = [
       id: "Program Intensif",
     },
     description: {
-      en: "A comprehensive learning program designed to prepare students for various assessments, including UH Assessment, ASAT, Religious Exams, US, and UN/TKA.",
-      id: "Program pembelajaran untuk menghadapi UH Assesment, ASAT, Ujian Keagamaan, US, UN/TKA",
+      en: "A comprehensive learning program designed to prepare students for various assessments, including UH Assessment, ASAT, Religious Exams, US, UN/TKA, and entrance exam preparations for junior and senior high schools.",
+      id: "Program pembelajaran untuk menghadapi UH Assesment, ASAT, Ujian Keagamaan, US, UN/TKA, persiapan tes masuk SMP dan SMA",
     },
     thumbnail: "/Logo.png",
   },
@@ -238,8 +238,8 @@ export const teachingMethods: teachingMethodsInterface[] = [
       id: "Pembelajaran Hibrid",
     },
     description: {
-      en: "Seamless integration of online and offline learning experiences.",
-      id: "Integrasi seamless dari pengalaman belajar online dan offline.",
+      en: "Hybrid learning offers increased flexibility while preserving meaningful two-way interaction. Lessons may be delivered online, offline, or through a combination of both, adapted to students' specific needs. This inclusive approach enables access for learners across various regions and countries.",
+      id: "Kegiatan pembelajaran lebih fleksibel dan tetap interaktif dua arah, karena dapat dilakukan secara online meeting atau offline, ataupun keduanya menyesuaikan dengan kebutuhan siswa, sehingga dapat menjangkau siswa dari berbagai daerah maupun negara.",
     },
   },
 ];
@@ -259,8 +259,8 @@ export const facilitiesData: facilitiesInterface[] = [
           id: "Panduan Belajar Komprehensif",
         },
         description: {
-          en: "Comprehensive study guides and modules for Science, Mathematics, Indonesian Language, and Thematic learning",
-          id: "Panduan dan modul belajar komprehensif untuk IPA, Matematika, Bahasa Indonesia, dan pembelajaran Tematik",
+          en: "Comprehensive study guides for IPAS (Science and Social Studies), Mathematics, Indonesian Language, English, and PPKN.",
+          id: "Modul panduan pembelajaran untuk mata pelajaran IPAS (IPA dan IPS), Matematika, Bahasa Indonesia, Bahasa Inggris, PPKN.",
         },
         thumbnail: "/Logo.png",
       },
@@ -271,8 +271,8 @@ export const facilitiesData: facilitiesInterface[] = [
           id: "Kumpulan Soal Latihan",
         },
         description: {
-          en: "Extensive practice test collections for School Exams (US) and National Assessment (AN) with special preparation for 6th grade",
-          id: "Kumpulan soal latihan untuk Ujian Sekolah (US) dan Asesmen Nasional (AN) dengan persiapan khusus kelas 6",
+          en: "Practice test collections for School Exams and Academic Ability Tests, including additional books specifically for 6th-grade students.",
+          id: "Buku bank soal untuk menghadapi Ujian Sekolah (US) dan atau Tes Kemampuan Akademik (TKA) tambahan khusus untuk siswa kelas 6.",
         },
         thumbnail: "/Logo.png",
       },
@@ -288,12 +288,12 @@ export const facilitiesData: facilitiesInterface[] = [
       {
         id: "fac-2-sub-1",
         title: {
-          en: "Detailed Study Modules",
-          id: "Modul Belajar Detail",
+          en: "Guided Study Modules",
+          id: "Modul Panduan Belajar",
         },
         description: {
-          en: "Detailed study modules for Science, Mathematics, Indonesian Language, and English",
-          id: "Modul belajar detail untuk IPA, Matematika, Bahasa Indonesia, dan Bahasa Inggris",
+          en: "Guided study modules for Science subjects (Biology, Chemistry, Physics), Mathematics, Indonesian Language, English, and formula pocket guides.",
+          id: "Modul panduan pembelajaran untuk mata pelajaran IPA (Biologi, Kimia, Fisika), Matematika, Bahasa Indonesia, Bahasa Inggris, dan buku saku rumus.",
         },
         thumbnail: "/Logo.png",
       },
@@ -304,8 +304,8 @@ export const facilitiesData: facilitiesInterface[] = [
           id: "Buku Soal Latihan & Panduan Rumus",
         },
         description: {
-          en: "Complete practice test books for School Exams and Academic Ability Tests, plus pocket formula guides for 9th grade students",
-          id: "Buku soal latihan lengkap untuk ujian sekolah dan tes kemampuan akademik, serta panduan rumus saku untuk siswa kelas 9",
+          en: "Practice test books for School Exams and Academic Ability Tests, including additional books specifically for 9th-grade students.",
+          id: "Buku bank soal untuk menghadapi Ujian Sekolah (US) dan atau Tes Kemampuan Akademik (TKA) tambahan khusus untuk siswa kelas 9.",
         },
         thumbnail: "/Logo.png",
       },
@@ -316,8 +316,8 @@ export const facilitiesData: facilitiesInterface[] = [
           id: "Program Belajar Akselerasi",
         },
         description: {
-          en: "Accelerated learning program (3 years condensed into 2 years)",
-          id: "Program belajar akselerasi (3 tahun dipadatkan menjadi 2 tahun)",
+          en: "Accelerated learning program with condensed material delivery in the first two years (7th and 8th grades), aimed at facilitating and preparing students for exams in the 9th grade.",
+          id: "Program percepatan belajar (akselerasi), dengan pemberian materi yang dipadatkan pada 2 tahun pertama (kelas 7 dan 8), yang bertujuan agar lebih memudahkan dan mempersiapkan siswa ketika akan menghadapi ujian di kelas 9 nantinya.",
         },
         thumbnail: "/Logo.png",
       },
@@ -331,14 +331,26 @@ export const facilitiesData: facilitiesInterface[] = [
     },
     facilities: [
       {
+        id: "fac-3-sub-0",
+        title: {
+          en: "Program Availability",
+          id: "Ketersediaan Program",
+        },
+        description: {
+          en: "Currently, the high school program is only available for 10th and 11th grade Science stream.",
+          id: "Saat ini, program kelas SMA baru dibuka hanya untuk kelas 10 dan 11 jurusan IPA.",
+        },
+        thumbnail: "/Logo.png",
+      },
+      {
         id: "fac-3-sub-1",
         title: {
           en: "Advanced Study Guides",
           id: "Panduan Belajar Lanjutan",
         },
         description: {
-          en: "Advanced study guides for Science subjects (Biology, Chemistry, Physics) and Mathematics (Core and Specialization tracks)",
-          id: "Panduan belajar lanjutan untuk mata pelajaran IPA (Biologi, Kimia, Fisika) dan Matematika (peminatan dan wajib)",
+          en: "Learning guide modules for science subjects (Biology, Chemistry, Physics) and Mathematics (Advanced and Basic/Compulsory).",
+          id: "Modul panduan pembelajaran Modul panduan pembelajaran untuk mata pelajaran IPA (Biologi, Kimia, Fisika) dan Matematika (Lanjutan dan Dasar/wajib)",
         },
         thumbnail: "/Logo.png",
       },

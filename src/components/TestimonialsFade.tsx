@@ -25,6 +25,7 @@ const TestimonialsFade = ({ testimonials = [] }: TestimonialsFadeProps) => {
           effect="fade"
           pagination={{
             clickable: true,
+
           }}
           modules={[EffectFade, Pagination, Autoplay]}
           className="testimonialsFade"
