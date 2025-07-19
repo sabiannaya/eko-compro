@@ -70,6 +70,7 @@ export default function LanguageToggle({
                   onClick={() => {
                     setOpen(false);
                     onLanguageChange(lang.code);
+                    console.log(`Language changed to: ${lang.code}`);
                   }}
                   role="option"
                   aria-selected={currentLanguage === lang.code}

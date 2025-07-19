@@ -77,8 +77,6 @@ export default function HomePageClient() {
   return (
     <>
       <LanguageSync />
-      {/* Your existing HomePage JSX content goes here */}
-      {/* Copy everything from your current page.tsx that renders the UI */}
       <div className="bg-slate-100">
         {/* Hero Section */}
         <section className="relative">
