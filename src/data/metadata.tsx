@@ -3,8 +3,8 @@ import { PageMetadata } from "@/utils/TypeContext";
 export const pageMetadata: Record<string, PageMetadata> = {
   home: {
     title: {
-      en: "MR. EKO Guidance Learning - Home Page",
-      id: "MR. EKO Guidance Learning - Halaman Utama",
+      en: "MR. EKO GL - Home Page",
+      id: "MR. EKO GL - Halaman Utama",
     },
     description: {
       en: "Welcome to MR. EKO Guidance Learning, where we nurture brighter minds with deeper values.",
@@ -17,8 +17,8 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   about: {
     title: {
-      en: "About Us - MR. EKO Guidance Learning",
-      id: "Tentang Kami - MR. EKO Guidance Learning",
+      en: "About Us - MR. EKO GL",
+      id: "Tentang Kami - MR. EKO GL",
     },
     description: {
       en: "Learn more about our mission, vision, and dedicated team at MR. EKO Guidance Learning.",

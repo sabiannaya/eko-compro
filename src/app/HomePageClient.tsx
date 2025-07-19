@@ -47,10 +47,6 @@ export default function HomePageClient() {
 
   // Get metadata for dynamic content
   const pageMetadata = getPageMetadataByKey("home");
-  const pageTitle = pageMetadata ? getLocalizedText(pageMetadata.title) : "";
-  const pageDescription = pageMetadata
-    ? getLocalizedText(pageMetadata.description)
-    : "";
 
   useEffect(() => {
     if (showModal) {
@@ -64,7 +60,7 @@ export default function HomePageClient() {
     };
   }, [showModal]);
 
-  const handleActivityClick = (activity: Activity) => {
+  const openModal = (activity: Activity) => {
     setSelectedActivity(activity);
     setShowModal(true);
   };
