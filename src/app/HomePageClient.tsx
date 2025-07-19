@@ -5,9 +5,9 @@ import { CalendarIcon } from "@heroicons/react/24/outline";
 
 import { useLanguage } from "@/utils/LanguageContext";
 import { Activity } from "@/utils/TypeContext";
-import { useLocalizedMetadata } from "@/utils/LocalizedMetadataContext";
+// import { useLocalizedMetadata } from "@/utils/LocalizedMetadataContext";
 
-import { getPageMetadataByKey } from "@/data/metadata";
+// import { getPageMetadataByKey } from "@/data/metadata";
 
 import LanguageSync from "@/components/LanguageSync";
 import CardSlider from "@/components/CardSlider";
@@ -39,14 +39,14 @@ import {
 
 export default function HomePageClient() {
   const { currentLanguage } = useLanguage();
-  const { getLocalizedText } = useLocalizedMetadata();
+  // const { getLocalizedText } = useLocalizedMetadata();
   const [showModal, setShowModal] = useState(false);
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(
     null
   );
 
   // Get metadata for dynamic content
-  const pageMetadata = getPageMetadataByKey("home");
+  // const pageMetadata = getPageMetadataByKey("home");
 
   useEffect(() => {
     if (showModal) {
