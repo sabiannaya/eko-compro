@@ -373,34 +373,42 @@ export const testimonials = [
     image: "/Haura.jpg",
     text: "Awal masuk jujur ngerasa takut, terutama kalau offline, tapi lama kelamaan biasa aja sih karena ada banyak temen jugaa di GL, terus jadi selangkah lebih tau dan ngerti. Kayak mtk jadi lebih gampang karena uda belajar di GL, jadi pas di sekolah kerasa gampang pas belajar/mau ulangan, intinya kebantu banget sih, di GL tuh. Kadang suka mumet karena TO nya banyak, apalagi kalau ditumpuk, huhuu nyesel deh. Tapi overall, aku seneng banget sih, bisa jadi bagian dari GL, apalagi kalo belajar sama Kak Haura. Makasih yaa buat semua yang udah ngajarin di GL."
   },
-  {
+
+    {
     id: "test-3",
-    name: "Ghaida",
-    role: "Alumni SD Istiqamah",
-    image: "/Logo.png",
-    text: "Sangat menyenangkan les di GL, belajar lebih cepat ngerti. Terlihat nyantai tp serius.. belajar kalau belum ngerti itu di ajarin sampai ngerti.. jadi matematika yang tadinya paling gak suka jadi suka banget. kalau ada ulangan jadi tenang."
-  },
-  {
-    id: "test-4",
-    name: "Selma",
-    role: "Alumni SD Istiqamah",
-    image: "/Logo.png",
-    text: "Pertama kali aku di GL aku jadi mood belajar, belajar jadi seru, nilai nya juga meningkat. Pokonya belajar jadi asik, tutor-tutornya seru, asik, dan baikk. Makasih ka Haura, ka Syifa, bu Merry, pa Eko udah sabar ajarin aku, makasih  juga ka mau cerita pengalaman kaka yang bikin aku termotivasi, makasih ya kaa"
-  },
-  {
-    id: "test-5",
-    name: "Alif",
-    role: "Alumni SD Istiqamah",
-    image: "/Logo.png",
-    text: "Awal ikut GL seru dan ngebantu banget. Karena TO nya rutin setiap bulan, kadang kalau kelewat jadi numpuk sampai akhirnya ngerasa kawatir takut ketinggalan dan masih banyak kurangnya. Makasi staf-staf GL, udah banyak ngebantu dan buat aku berkembang. "
-  },
-  {
-    id: "test-6",
     name: "Azka",
     role: "Alumni SD Istiqamah",
     image: "/Azka.jpg",
     text: "Seru, metode belajar di GL tidak membosankan, banyak temannya."
   },
+
+   {
+    id: "test-4",
+    name: "Malika",
+    role: "Alumni SD Istiqamah",
+    image: "/Malika.jpg",
+    text: "Belajar di GL seru, asik, dan oke, banyak temannya, dan tutor-tutornya ramah.",
+  },
+
+    {
+    id: "test-5",
+    name: "Khansa",
+    role: "Alumni SD Istiqamah",
+    image: "/Khansa.jpg",
+    text: "Belajar di GL menyenangkan, cepat menghafal materinya, pokoknya seru, semangat terus GL!",
+  },
+
+
+    {
+    id: "test-6",
+    name: "Luna",
+    role: "Alumni SD Istiqamah - Ranking 2",
+    image: "/Luna.jpg",
+    text: "Seru banget, pelajarannya gampang dimengerti. Makasih ya buat Pak Eko, Bu Mery, Kak Haura, dan Kak Syifa udah mau ngajarin aku dan teman-teman aku, semoga staff-staff GL sehat selalu dan terus semangat mengajar anak-anak GL."
+  },
+   
+
+
   {
     id: "test-7",
     name: "Yasmin",
@@ -408,13 +416,15 @@ export const testimonials = [
     image: "/Logo.png",
     text: "Menyenangkan bisa belajar dan mendapatkan banyak ilmu di GL."
   },
-  {
+
+    {
     id: "test-8",
-    name: "Malika",
+    name: "Selma",
     role: "Alumni SD Istiqamah",
-    image: "/Malika.jpg",
-    text: "Belajar di GL seru, asik, dan oke, banyak temannya, dan tutor-tutornya ramah.",
+    image: "/Logo.png",
+    text: "Pertama kali aku di GL aku jadi mood belajar, belajar jadi seru, nilai nya juga meningkat. Pokonya belajar jadi asik, tutor-tutornya seru, asik, dan baikk. Makasih ka Haura, ka Syifa, bu Merry, pa Eko udah sabar ajarin aku, makasih  juga ka mau cerita pengalaman kaka yang bikin aku termotivasi, makasih ya kaa"
   },
+
   {
     id: "test-9",
     name: "Najwa",
@@ -429,20 +439,21 @@ export const testimonials = [
     image: "/Logo.png",
     text: "Saat belajar di GL, seruu dan cepet paham juga tentang apa yang lagi dipelajari."
   },
-  {
+{
     id: "test-11",
-    name: "Khansa",
+    name: "Ghaida",
     role: "Alumni SD Istiqamah",
-    image: "/Khansa.jpg",
-    text: "Belajar di GL menyenangkan, cepat menghafal materinya, pokoknya seru, semangat terus GL!",
+    image: "/Logo.png",
+    text: "Sangat menyenangkan les di GL, belajar lebih cepat ngerti. Terlihat nyantai tp serius.. belajar kalau belum ngerti itu di ajarin sampai ngerti.. jadi matematika yang tadinya paling gak suka jadi suka banget. kalau ada ulangan jadi tenang."
   },
   {
     id: "test-12",
-    name: "Luna",
-    role: "Alumni SD Istiqamah - Ranking 2",
-    image: "/Luna.jpg",
-    text: "Seru banget, pelajarannya gampang dimengerti. Makasih ya buat Pak Eko, Bu Mery, Kak Haura, dan Kak Syifa udah mau ngajarin aku dan teman-teman aku, semoga staff-staff GL sehat selalu dan terus semangat mengajar anak-anak GL."
+    name: "Alif",
+    role: "Alumni SD Istiqamah",
+    image: "/Logo.png",
+    text: "Awal ikut GL seru dan ngebantu banget. Karena TO nya rutin setiap bulan, kadang kalau kelewat jadi numpuk sampai akhirnya ngerasa kawatir takut ketinggalan dan masih banyak kurangnya. Makasi staf-staf GL, udah banyak ngebantu dan buat aku berkembang. "
   },
+
   {
     id: "test-13",
     name: "Orang tua Rio",
