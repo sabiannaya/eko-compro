@@ -55,16 +55,16 @@ const CardSlider = <T extends CardData>({
           />
 
           <div className="flex flex-col items-center justify-center">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center line-clamp-2">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">
               {item.title[currentLanguage] || item.name || "Default Title"}
             </h3>
             {item.description && (
-              <p className="text-gray-600 text-sm text-center line-clamp-3">
+              <p className="text-gray-600 text-sm text-center">
                 {item.description[currentLanguage]}
               </p>
             )}
             {!item.description && item.position && (
-              <p className="text-gray-600 text-sm text-center line-clamp-3">
+              <p className="text-gray-600 text-sm text-center">
                 {item.position}
               </p>
             )}
