@@ -13,20 +13,20 @@ export const navItems: Item[] = [
     },
     href: "/",
   },
-  {
-    title: {
-      en: "About Us",
-      id: "Tentang Kami",
-    },
-    href: "/about",
-  },
-  {
-    title: {
-      en: "Programs",
-      id: "Program",
-    },
-    href: "/program",
-  },
+  // {
+  //   title: {
+  //     en: "About Us",
+  //     id: "Tentang Kami",
+  //   },
+  //   href: "/about",
+  // },
+  // {
+  //   title: {
+  //     en: "Programs",
+  //     id: "Program",
+  //   },
+  //   href: "/program",
+  // },
   {
     title: {
       en: "Contact Us",

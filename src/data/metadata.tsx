@@ -29,6 +29,20 @@ export const pageMetadata: Record<string, PageMetadata> = {
       id: "tentang kami, misi, visi, tim, filosofi pendidikan",
     },
   },
+  contact: {
+    title: {
+      en: "Contact Us - MR. EKO GL",
+      id: "Hubungi Kami - MR. EKO GL",
+    },
+    description: {
+      en: "Get in touch with us for inquiries, support, or feedback at MR. EKO Guidance Learning.",
+      id: "Hubungi kami untuk pertanyaan, dukungan, atau umpan balik di MR. EKO Guidance Learning.",
+    },
+    keywords: {
+      en: "contact, support, inquiries, feedback, educational services",
+      id: "kontak, dukungan, pertanyaan, umpan balik, layanan pendidikan",
+    },
+  },
 };
 
 export function getPageMetadataByKey(key: string): PageMetadata | null {
