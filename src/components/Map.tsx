@@ -7,12 +7,12 @@ import "leaflet/dist/leaflet.css";
 // Fix for default markers
 delete (L.Icon.Default.prototype as { _getIconUrl?: unknown })._getIconUrl;
 L.Icon.Default.mergeOptions({
-    iconRetinaUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-    iconUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-    shadowUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+  iconRetinaUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
 type MapProps = {
@@ -25,7 +25,7 @@ const mapContainerStyle: React.CSSProperties = {
   width: "100%",
 };
 
-const Map: React.FC<MapProps> = ({ latitude, longitude }) => {
+export default function Map({ latitude, longitude }: MapProps) {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -49,6 +49,4 @@ const Map: React.FC<MapProps> = ({ latitude, longitude }) => {
   }, [latitude, longitude]);
 
   return <div ref={mapRef} style={mapContainerStyle} />;
-};
-
-export default Map;
+}

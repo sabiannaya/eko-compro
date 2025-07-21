@@ -12,6 +12,7 @@ import { useLanguage } from "@/utils/LanguageContext";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
+
 export default function Homepage() {
   const [formData, setFormData] = useState({
     name: "",
