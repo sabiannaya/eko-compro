@@ -1,7 +1,6 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Map from "@/components/Map";
 import {
   contact,
   contactDetail,
@@ -11,9 +10,13 @@ import {
 import { useLanguage } from "@/utils/LanguageContext";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
-
+import dynamic from "next/dynamic";
 
 export default function Homepage() {
+  const Map = dynamic(() => import("@/components/Map"), {
+    ssr: false,
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -212,6 +215,5 @@ export default function Homepage() {
 
       <Footer currentLanguage={currentLanguage} />
     </div>
-
   );
 }
