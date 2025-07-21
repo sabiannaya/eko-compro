@@ -2,9 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { navItems, legalItems } from "@/data/navigation";
 
-const Footer = ({
-  currentLanguage = "id"
-}) => {
+const Footer = ({ currentLanguage = "id" }) => {
   return (
     <footer className="bg-white">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col gap-8">
@@ -98,6 +96,17 @@ const Footer = ({
                     +62 878-3785-9720
                   </Link>
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-medium text-gray-600">Email:</p>
+                <Link
+                  href="mailto:guidancelearningmreko@gmail.com"
+                  className="text-yellow-600 hover:text-yellow-500 transition-colors duration-200
+                "
+                >
+                  guidancelearningmreko@gmail.com
+                </Link>
               </div>
             </div>
           </div>
