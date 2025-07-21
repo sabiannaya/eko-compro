@@ -74,7 +74,7 @@ export const programData: ProgramInterface[] = [
       id: "Program percepatan materi/Akselerasi (Tingkat SMP)",
     },
     description: {
-      en: "This program is designed for high-potential junior high school students who want to optimize their academic abilities and absorb material more quickly. The focus is on strong concept mastery and critical thinking development, not just speed.",
+      en: "The Junior High School Accelerated Program is a special pathway for high-potential students, focusing on deep concept mastery and critical thinking development, producing graduates with a strong academic foundation and high-level thinking skills, not just accelerated graduation.",
       id: "Program Akselerasi SMP adalah jalur khusus bagi siswa berpotensi tinggi, yang fokus pada penguasaan konsep mendalam dan pengembangan berpikir kritis, menghasilkan lulusan dengan fondasi akademik kuat dan keterampilan berpikir tingkat tinggi, bukan sekadar percepatan kelulusan.",
     },
     thumbnail: "/Logo.png",
