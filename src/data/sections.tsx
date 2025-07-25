@@ -43,12 +43,12 @@ export const methods: Section = {
 export const staffs: Section = {
   id: "staff-1",
   title: {
-    id: "Tim Pengajar",
-    en: "Teaching Staff",
+    id: "Tim Pengajar dan Staf",
+    en: "Teaching Staff and Team",
   },
   description: {
-    id: "Tim pengajar kami terdiri dari para profesional berpengalaman di bidangnya.",
-    en: "Our teaching staff consists of experienced professionals in their fields.",
+    id: "Staf pengajar kami adalah para profesional berpengalaman dan berdedikasi di bidang pendidikan.",
+    en: "Our teaching staff and team are dedicated, experienced professionals in education.",
   },
 };
 

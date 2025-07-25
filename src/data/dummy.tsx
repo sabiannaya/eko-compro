@@ -74,8 +74,8 @@ export const programData: ProgramInterface[] = [
       id: "Program percepatan materi/Akselerasi (Tingkat SMP)",
     },
     description: {
-      en: "The Junior High School Accelerated Program is a special pathway for high-potential students, focusing on deep concept mastery and critical thinking development, producing graduates with a strong academic foundation and high-level thinking skills, not just accelerated graduation.",
-      id: "Program Akselerasi SMP adalah jalur khusus bagi siswa berpotensi tinggi, yang fokus pada penguasaan konsep mendalam dan pengembangan berpikir kritis, menghasilkan lulusan dengan fondasi akademik kuat dan keterampilan berpikir tingkat tinggi, bukan sekadar percepatan kelulusan.",
+      en: "Accelerated learning program with condensed material delivery in the first two years (7th and 8th grades), aimed at facilitating and preparing students for exams in the 9th grade, focusing on deep concept mastery and critical thinking development, resulting in graduates with a strong academic foundation and high-level thinking skills, not just accelerated graduation.",
+      id: "Program percepatan belajar (akselerasi), dengan pemberian materi yang dipadatkan pada 2 tahun pertama (kelas 7 dan 8), yang bertujuan agar lebih memudahkan dan mempersiapkan siswa ketika akan menghadapi ujian di kelas 9 yang fokus pada penguasaan konsep mendalam dan pengembangan berpikir kritis, menghasilkan lulusan dengan fondasi akademik kuat dan keterampilan berpikir tingkat tinggi, bukan sekadar percepatan kelulusan.",
     },
     thumbnail: "/Logo.png",
   },
