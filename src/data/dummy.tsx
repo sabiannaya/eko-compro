@@ -90,8 +90,8 @@ export const staffData: StaffInterface[] = [
       id: "Eko Sulaksono, S.Pd.",
     },
     description: {
-      en: "Founder & Head Tutor",
-      id: "Pendiri & Kepala Tutor",
+      en: "Science Tutor",
+      id: "Tutor Sains",
     },
     thumbnail: "/Logo.png",
   },
@@ -102,8 +102,8 @@ export const staffData: StaffInterface[] = [
       id: "Dra. Mery Mariam",
     },
     description: {
-      en: "Co-Founder & Senior Tutor",
-      id: "Co-Founder & Tutor Senior",
+      en: "Science Tutor",
+      id: "Tutor Sains",
     },
     thumbnail: "/Logo.png",
   },
@@ -114,8 +114,8 @@ export const staffData: StaffInterface[] = [
       id: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
     },
     description: {
-      en: "Senior Tutor - Science",
-      id: "Tutor Senior - Sains",
+      en: "Science Tutor",
+      id: "Tutor Sains",
     },
     thumbnail: "/Logo.png",
   },
@@ -126,8 +126,8 @@ export const staffData: StaffInterface[] = [
       id: "Jinan Kautsar Syifa Sulaksono, S.K.M",
     },
     description: {
-      en: "Tutor - Mathematics & Biology",
-      id: "Tutor - Matematika & Biologi",
+      en: "Science Tutor",
+      id: "Tutor Sains",
     },
     thumbnail: "/Logo.png",
   },
