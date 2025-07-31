@@ -62,7 +62,7 @@ export type Activity = {
   description: LocalizedField;
   thumbnail: string;
   images: string[];
-  category: string;
-  schedule: string;
+  category: LocalizedField;
+  schedule: LocalizedField;
   tags: string[];
 };

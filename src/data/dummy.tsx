@@ -82,7 +82,6 @@ export const programData: ProgramInterface[] = [
 ];
 
 export const staffData: StaffInterface[] = [
-  // Terapkan tipe StaffData
   {
     id: "staff-1",
     title: {
@@ -90,8 +89,8 @@ export const staffData: StaffInterface[] = [
       id: "Eko Sulaksono, S.Pd.",
     },
     description: {
-      en: "Science Tutor",
-      id: "Tutor Sains",
+      en: "Tutor",
+      id: "Tutor",
     },
     thumbnail: "/Logo.png",
   },
@@ -102,8 +101,8 @@ export const staffData: StaffInterface[] = [
       id: "Dra. Mery Mariam",
     },
     description: {
-      en: "Science Tutor",
-      id: "Tutor Sains",
+      en: "Tutor",
+      id: "Tutor",
     },
     thumbnail: "/Logo.png",
   },
@@ -114,8 +113,8 @@ export const staffData: StaffInterface[] = [
       id: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
     },
     description: {
-      en: "Science Tutor",
-      id: "Tutor Sains",
+      en: "Tutor",
+      id: "Tutor",
     },
     thumbnail: "/Logo.png",
   },
@@ -126,8 +125,8 @@ export const staffData: StaffInterface[] = [
       id: "Jinan Kautsar Syifa Sulaksono, S.K.M",
     },
     description: {
-      en: "Science Tutor",
-      id: "Tutor Sains",
+      en: "Tutor",
+      id: "Tutor",
     },
     thumbnail: "/Logo.png",
   },
@@ -501,8 +500,14 @@ export const activitiesData: Activity[] = [
     },
     thumbnail: "/activities1.jpg",
     images: ["/activities1.jpg"],
-    category: "intensif",
-    schedule: "Setiap Sabtu, 9AM-12PM",
+    category: {
+      en: "Intensive Learning",
+      id: "Pembelajaran Intensif",
+    },
+    schedule: {
+      en: "Adjustable Schedule",
+      id: "Menyesuaikan Jadwal",
+    },
     tags: ["Luring"],
   },
   {
@@ -522,8 +527,14 @@ export const activitiesData: Activity[] = [
       "/activitieszoom3.jpg",
       "/activitieszoom4.jpg",
     ],
-    category: "Intensif zoom",
-    schedule: "Tergantung jadwal",
+    category: {
+      en: "Online Learning",
+      id: "Pembelajaran Daring",
+    },
+    schedule: {
+      en: "Adjustable Schedule",
+      id: "Menyesuaikan Jadwal",
+    },
     tags: ["daring"],
   },
 ];

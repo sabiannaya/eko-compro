@@ -16,7 +16,6 @@ import Image from "next/image";
 import ActivityModal from "@/components/ActivityModal";
 import Footer from "@/components/Footer";
 
-
 // Import your existing data and components
 import {
   activitiesData,
@@ -304,7 +303,7 @@ export default function HomePageClient() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium">
-                      {activity.category}
+                      {activity.category[currentLanguage]}
                     </span>
                   </div>
 
@@ -312,7 +311,7 @@ export default function HomePageClient() {
                     <div className="flex items-center gap-2 mb-1">
                       <CalendarIcon className="w-5 h-5 text-blue-500" />
                       <span className="text-sm text-gray-500">
-                        {activity.schedule}
+                        {activity.schedule[currentLanguage]}
                       </span>
                     </div>
 
