@@ -83,7 +83,7 @@ const ActivityModal = ({
             </Swiper>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium z-10">
-              {activity.category}
+              {activity.category[currentLanguage]}
             </span>
           </div>
         )}
@@ -100,7 +100,7 @@ const ActivityModal = ({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium">
-                {activity.category}
+                {activity.category[currentLanguage]}
               </span>
             </div>
           ))}
@@ -125,7 +125,7 @@ const ActivityModal = ({
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5"
               />
             </svg>
-            <span className="text-sm">{activity.schedule}</span>
+            <span className="text-sm">{activity.schedule[currentLanguage]}</span>
           </div>
 
           {/* Description with Read More functionality */}

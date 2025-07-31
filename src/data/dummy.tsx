@@ -4,8 +4,7 @@ import {
   ProgramInterface,
   StaffInterface,
   teachingMethodsInterface,
-} from "@/utils/TypeContext"; // Impor tipe Interface dari types.ts
-
+} from "@/utils/TypeContext";
 export const programData: ProgramInterface[] = [
   {
     id: "prog-1",
@@ -82,6 +81,7 @@ export const programData: ProgramInterface[] = [
 ];
 
 export const staffData: StaffInterface[] = [
+  // Terapkan tipe StaffData
   {
     id: "staff-1",
     title: {
@@ -89,8 +89,8 @@ export const staffData: StaffInterface[] = [
       id: "Eko Sulaksono, S.Pd.",
     },
     description: {
-      en: "Tutor",
-      id: "Tutor",
+      en: "Founder & Head Tutor",
+      id: "Pendiri & Kepala Tutor",
     },
     thumbnail: "/Logo.png",
   },
@@ -101,8 +101,8 @@ export const staffData: StaffInterface[] = [
       id: "Dra. Mery Mariam",
     },
     description: {
-      en: "Tutor",
-      id: "Tutor",
+      en: "Co-Founder & Senior Tutor",
+      id: "Co-Founder & Tutor Senior",
     },
     thumbnail: "/Logo.png",
   },
@@ -113,8 +113,8 @@ export const staffData: StaffInterface[] = [
       id: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
     },
     description: {
-      en: "Tutor",
-      id: "Tutor",
+      en: "Senior Tutor - Science",
+      id: "Tutor Senior - Sains",
     },
     thumbnail: "/Logo.png",
   },
@@ -125,8 +125,8 @@ export const staffData: StaffInterface[] = [
       id: "Jinan Kautsar Syifa Sulaksono, S.K.M",
     },
     description: {
-      en: "Tutor",
-      id: "Tutor",
+      en: "Tutor - Mathematics & Biology",
+      id: "Tutor - Matematika & Biologi",
     },
     thumbnail: "/Logo.png",
   },

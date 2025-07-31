@@ -3,12 +3,12 @@ import { PageMetadata } from "@/utils/TypeContext";
 export const pageMetadata: Record<string, PageMetadata> = {
   home: {
     title: {
-      en: "MR. EKO GL - Home Page",
-      id: "MR. EKO GL - Halaman Utama",
+      en: "GL MR. EKO - Home Page",
+      id: "GL MR. EKO - Halaman Utama",
     },
     description: {
-      en: "Welcome to MR. EKO Guidance Learning, where we nurture brighter minds with deeper values.",
-      id: "Selamat datang di MR. EKO Guidance Learning, tempat kami membina pikiran yang lebih cerah dengan nilai-nilai yang lebih dalam.",
+      en: "Welcome to Guidance Learning Mr. Eko, where we nurture brighter minds with deeper values.",
+      id: "Selamat datang di Guidance Learning Mr. Eko, tempat kami membina pikiran yang lebih cerah dengan nilai-nilai yang lebih dalam.",
     },
     keywords: {
       en: "education, guidance, learning, tutoring, academic support, private tutoring",
@@ -17,12 +17,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   about: {
     title: {
-      en: "About Us - MR. EKO GL",
-      id: "Tentang Kami - MR. EKO GL",
+      en: "GL MR. EKO - About Us",
+      id: "GL MR. EKO - Tentang Kami",
     },
     description: {
-      en: "Learn more about our mission, vision, and dedicated team at MR. EKO Guidance Learning.",
-      id: "Pelajari lebih lanjut tentang misi, visi, dan tim yang berdedikasi di MR. EKO Guidance Learning.",
+      en: "Learn more about our mission, vision, and dedicated team at Guidance Learning Mr. Eko.",
+      id: "Pelajari lebih lanjut tentang misi, visi, dan tim yang berdedikasi di Guidance Learning Mr. Eko.",
     },
     keywords: {
       en: "about us, mission, vision, team, educational philosophy",
@@ -31,12 +31,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   contact: {
     title: {
-      en: "Contact Us - MR. EKO GL",
-      id: "Hubungi Kami - MR. EKO GL",
+      en: "GL MR. EKO - Contact Us",
+      id: "GL MR. EKO - Hubungi Kami",
     },
     description: {
-      en: "Get in touch with us for inquiries, support, or feedback at MR. EKO Guidance Learning.",
-      id: "Hubungi kami untuk pertanyaan, dukungan, atau umpan balik di MR. EKO Guidance Learning.",
+      en: "Get in touch with us for inquiries, support, or feedback at Guidance Learning Mr. Eko.",
+      id: "Hubungi kami untuk pertanyaan, dukungan, atau umpan balik di Guidance Learning Mr. Eko.",
     },
     keywords: {
       en: "contact, support, inquiries, feedback, educational services",

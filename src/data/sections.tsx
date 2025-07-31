@@ -7,7 +7,7 @@ interface Section {
 }
 
 export const heroContent: HeroContent = {
-  title: "MR. EKO Guidance Learning",
+  title: "Guidance Learning Mr. Eko",
   shine: "SHINE: Cerdas – Berhati – Individu dengan – Etika Mulia",
   subtitle: "Pikiran Cemerlang dengan Nilai Mendalam",
   description: {
