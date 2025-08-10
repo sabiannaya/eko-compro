@@ -81,7 +81,7 @@ export default function HomePageClient() {
               <div className="hidden sm:flex h-full flex-col items-center justify-center text-white z-10 relative">
                 <div className="text-center max-w-4xl px-5">
                   <h1 className="text-3xl 2xl:text-5xl font-bold mb-6">
-                    MR. EKO Guidance Learning
+                    Guidance Learning Mr.Eko
                   </h1>
                   <div className="pt-6 border-t-2 border-white">
                     <h2 className="text-xl 2xl:text-2xl font-semibold mb-3">

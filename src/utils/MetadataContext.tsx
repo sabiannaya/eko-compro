@@ -29,7 +29,7 @@ export async function getPageMetadata(
       description: localizedDescription,
       type: "website",
       locale: language === "en" ? "en_US" : "id_ID",
-      siteName: "MR. EKO Guidance Learning",
+      siteName: "Guidance Learning Mr.Eko",
       url: "https://yourdomain.com",
     },
     twitter: {

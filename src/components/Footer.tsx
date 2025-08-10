@@ -116,7 +116,7 @@ const Footer = ({ currentLanguage = "id" }) => {
             <span>
               © {new Date().getFullYear()}{" "}
               <span className="font-semibold text-gray-700">
-                Mr. Eko Guidance Learning
+                Guidance Learning Mr.Eko
               </span>
               .
             </span>

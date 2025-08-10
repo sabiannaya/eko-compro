@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
   if (!metadata) {
     // Fallback metadata if page key doesn't exist
     return {
-      title: "MR. EKO Guidance Learning",
+      title: "Guidance Learning Mr.Eko",
       description: "Educational guidance and learning platform",
     };
   }

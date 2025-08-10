@@ -5,8 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | MR. EKO Guidance Learning",
-    default: "MR. EKO Guidance Learning",
+    template: "%s | Guidance Learning Mr.Eko",
+    default: "Guidance Learning Mr.Eko",
   },
   description:
     "Educational guidance and learning platform for nurturing brighter minds with deeper values",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "structured-data": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "MR. EKO Guidance Learning",
+      name: "Guidance Learning Mr.Eko",
       url: "https://guidancelearning-mr-eko.com",
       logo: "https://guidancelearning-mr-eko.com/logo.png",
     }),
