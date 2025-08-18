@@ -109,8 +109,8 @@ export const staffData: StaffInterface[] = [
   {
     id: "staff-3",
     title: {
-      en: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
-      id: "Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
+      en: "Ns. Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
+      id: "Ns. Haura Labibah Salsabil Sulaksono, S.Kep., M.Biotek",
     },
     description: {
       en: "Senior Tutor - Science",
