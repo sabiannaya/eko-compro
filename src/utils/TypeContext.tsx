@@ -63,6 +63,12 @@ export type Activity = {
   thumbnail: string;
   images: string[];
   category: LocalizedField;
-  schedule: LocalizedField;
   tags: string[];
+};
+
+export type Achievement = {
+  id: string;
+  title: LocalizedField;
+  description: LocalizedField;
+  image: string;
 };

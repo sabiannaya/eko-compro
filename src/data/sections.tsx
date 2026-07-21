@@ -88,6 +88,18 @@ export const activities: Section = {
   },
 };
 
+export const achievements: Section = {
+  id: "achievement-1",
+  title: {
+    id: "Prestasi",
+    en: "Achievements",
+  },
+  description: {
+    id: "Dokumentasi capaian siswa dan momen-momen terbaik yang menunjukkan proses belajar yang berdampak.",
+    en: "A visual highlight of student milestones and standout moments that reflect meaningful learning progress.",
+  },
+};
+
 export const contact: Section = {
   id: "contact-1",
   title: {

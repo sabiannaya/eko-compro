@@ -15,7 +15,6 @@ interface CardData {
   thumbnail: string; 
 
   position?: string;
-  schedule?: LocalizedField;
   category?: LocalizedField;
   tags?: string[];
 }
@@ -67,10 +66,6 @@ const CardSlider = <T extends CardData>({
               <p className="text-gray-600 text-sm text-center">
                 {item.position}
               </p>
-            )}
-
-            {item.schedule && (
-              <p className="text-sm text-gray-500 mt-1">{item.schedule[currentLanguage]}</p>
             )}
             {item.category && (
               <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs mt-2">

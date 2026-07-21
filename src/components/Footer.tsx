@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { navItems, legalItems } from "@/data/navigation";
+import { navItems } from "@/data/navigation";
 
 const Footer = ({ currentLanguage = "id" }) => {
   return (
     <footer className="bg-white">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col gap-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* Navigation Section */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-gray-800">Quick Links</h3>
@@ -27,7 +27,7 @@ const Footer = ({ currentLanguage = "id" }) => {
           </div>
 
           {/* Legal Section */}
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             <h3 className="text-lg font-semibold text-gray-800">Legal</h3>
             <nav>
               <ul className="space-y-3">
@@ -43,7 +43,7 @@ const Footer = ({ currentLanguage = "id" }) => {
                 ))}
               </ul>
             </nav>
-          </div>
+          </div> */}
 
           {/* Contact Section */}
           <div className="space-y-6">

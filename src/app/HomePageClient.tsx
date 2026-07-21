@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CalendarIcon } from "@heroicons/react/24/outline";
 
 import { useLanguage } from "@/utils/LanguageContext";
 import { Activity } from "@/utils/TypeContext";
@@ -14,10 +13,12 @@ import CardSlider from "@/components/CardSlider";
 import TestimonialsFade from "@/components/TestimonialsFade";
 import Image from "next/image";
 import ActivityModal from "@/components/ActivityModal";
+import AchievementsSlider from "@/components/AchievementsSlider";
 import Footer from "@/components/Footer";
 
 // Import your existing data and components
 import {
+  achievementsData,
   activitiesData,
   facilitiesData,
   programData,
@@ -34,6 +35,7 @@ import {
   staffs as staffSection,
   testimonials as testimonialsSection,
   activities as activitiesSection,
+  achievements as achievementsSection,
 } from "@/data/sections";
 
 export default function HomePageClient() {
@@ -257,18 +259,19 @@ export default function HomePageClient() {
           </section>
 
           {/* Testimonials Section */}
-          <section className="w-full px-5 flex flex-col items-center justify-center gap-2">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+          <section className="px-5 pb-10 sm:pb-16">
+            <div className="mb-6 text-center">
+              <h2 className="text-3xl font-bold text-gray-800 mb-3">
                 {testimonialsSection.title[currentLanguage]}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="mx-auto max-w-2xl text-gray-600 text-lg">
                 {testimonialsSection.description[currentLanguage]}
               </p>
             </div>
-            <div className="w-full sm:w-2/3 mx-auto">
-              <TestimonialsFade testimonials={testimonials} />
-            </div>
+            <TestimonialsFade
+              testimonials={testimonials}
+              currentLanguage={currentLanguage}
+            />
           </section>
 
           {/* Activities Section */}
@@ -308,20 +311,51 @@ export default function HomePageClient() {
                   </div>
 
                   <div className="p-4 sm:p-5 flex flex-col gap-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <CalendarIcon className="w-5 h-5 text-blue-500" />
-                      <span className="text-sm text-gray-500">
-                        {activity.schedule[currentLanguage]}
-                      </span>
-                    </div>
-
                     <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors">
                       {activity.title[currentLanguage]}
                     </h3>
+                    <p className="text-sm text-gray-600 line-clamp-2">
+                      {activity.description[currentLanguage]}
+                    </p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {activity.tags.map((tag) => (
+                        <span
+                          key={`${activity.id}-${tag}`}
+                          className="rounded-full bg-slate-100 px-2 py-1 text-xs font-medium text-slate-700"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* Mobile Carousel */}
+            <div className="md:hidden rounded-2xl overflow-hidden">
+              <CardSlider
+                data={activitiesData}
+                currentLanguage={currentLanguage}
+                onCardClick={openModal}
+              />
+            </div>
+          </section>
+
+          {/* Achievements Section */}
+          <section className="px-5 pb-10 sm:pb-16">
+            <div className="mb-6 text-center">
+              <h2 className="text-3xl font-bold text-gray-800 mb-3">
+                {achievementsSection.title[currentLanguage]}
+              </h2>
+              <p className="mx-auto max-w-2xl text-gray-600 text-lg">
+                {achievementsSection.description[currentLanguage]}
+              </p>
+            </div>
+            <AchievementsSlider
+              data={achievementsData}
+              currentLanguage={currentLanguage}
+            />
           </section>
         </div>
 

@@ -34,12 +34,12 @@ export default function LanguageToggle({
     <div className="relative">
       <button
         type="button"
-        className="flex items-center space-x-2 px-3 py-2 bg-slate-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition-all duration-200 min-w-[80px]"
+        className="flex cursor-pointer items-center space-x-2 px-3 py-2 bg-slate-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition-all duration-200 min-w-[80px]"
         onClick={() => setOpen(!open)}
         aria-haspopup="listbox"
         aria-expanded={open}
       >
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2 cursor-pointer">
           <div className="w-6 h-6 overflow-hidden rounded-sm">
             {currentLang.icon}
           </div>
@@ -48,9 +48,8 @@ export default function LanguageToggle({
           </span>
         </div>
         <ChevronDownIcon
-          className={`w-4 h-4 text-gray-700 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`w-4 h-4 text-gray-700 transition-transform duration-200 ${open ? "rotate-180" : ""
+            }`}
         />
       </button>
 
@@ -62,11 +61,10 @@ export default function LanguageToggle({
               {languages.map((lang) => (
                 <button
                   key={lang.code}
-                  className={`w-full flex items-center space-x-3 px-4 py-2.5 text-left hover:bg-gray-50 transition-colors duration-150 ${
-                    currentLanguage === lang.code
-                      ? "bg-blue-50 text-blue-700"
-                      : "text-gray-700"
-                  }`}
+                  className={`w-full flex items-center space-x-3 px-4 py-2.5 text-left cursor-pointer hover:bg-gray-50 transition-colors duration-150 ${currentLanguage === lang.code
+                    ? "bg-blue-50 text-blue-700"
+                    : "text-gray-700"
+                    }`}
                   onClick={() => {
                     setOpen(false);
                     onLanguageChange(lang.code);

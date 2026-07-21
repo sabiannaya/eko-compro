@@ -1,32 +1,25 @@
 "use client";
 
+import { Achievement } from "@/utils/TypeContext";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export interface TestimonialItem {
-  id?: string;
-  name: string;
-  role: string;
-  image: string;
-  text: string;
-}
-
-interface TestimonialsFadeProps {
-  testimonials: TestimonialItem[];
+interface AchievementsSliderProps {
+  data: Achievement[];
   currentLanguage?: string;
 }
 
-export default function TestimonialsFade({
-  testimonials = [],
+export default function AchievementsSlider({
+  data,
   currentLanguage = "id",
-}: TestimonialsFadeProps) {
+}: AchievementsSliderProps) {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [direction, setDirection] = useState<"next" | "prev">("next");
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const total = testimonials.length;
+  const total = data.length;
 
   const goTo = useCallback(
     (index: number, dir: "next" | "prev" = "next") => {
@@ -42,27 +35,23 @@ export default function TestimonialsFade({
   );
 
   const next = useCallback(() => {
-    if (total === 0) return;
     goTo((current + 1) % total, "next");
   }, [current, total, goTo]);
 
   const prev = useCallback(() => {
-    if (total === 0) return;
     goTo((current - 1 + total) % total, "prev");
   }, [current, total, goTo]);
 
   useEffect(() => {
-    if (!isHovered && total > 0) {
-      timerRef.current = setTimeout(next, 5000);
+    if (!isHovered) {
+      timerRef.current = setTimeout(next, 4000);
     }
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [current, isHovered, next, total]);
+  }, [current, isHovered, next]);
 
-  if (!testimonials || testimonials.length === 0) return null;
-
-  const activeTestimonial = testimonials[current];
+  const achievement = data[current];
 
   return (
     <div
@@ -72,13 +61,14 @@ export default function TestimonialsFade({
     >
       {/* Grid: photo left | content right */}
       <div className="grid grid-cols-1 sm:grid-cols-2">
+
         {/* ── Left: Photo panel ── */}
         <div className="relative aspect-[4/3] sm:aspect-square overflow-hidden p-4 sm:p-6 bg-slate-50/50">
-          {testimonials.map((item, index) => {
+          {data.map((item, index) => {
             const isActive = index === current;
             return (
               <div
-                key={item.id || item.name + index}
+                key={item.id || index}
                 className={`absolute inset-4 sm:inset-6 rounded-xl overflow-hidden transition-all duration-300 ease-out ${isActive
                   ? "opacity-100 scale-100 pointer-events-auto z-10"
                   : "opacity-0 scale-95 pointer-events-none z-0"
@@ -86,9 +76,9 @@ export default function TestimonialsFade({
               >
                 <Image
                   src={item.image}
-                  alt={`${item.name}'s photo`}
+                  alt={item.title[currentLanguage] || item.title.id}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 640px) 100vw, 50vw"
                   priority={index === 0}
                 />
@@ -101,10 +91,10 @@ export default function TestimonialsFade({
 
         {/* ── Right: Text + controls ── */}
         <div className="flex flex-col justify-between gap-4 p-6 sm:p-8 bg-white">
-          {/* Top: label + quote + author */}
+          {/* Top: label + title + desc */}
           <div
-            key={`testimonial-${current}`}
-            className="flex flex-col flex-grow gap-3"
+            key={`text-${current}`}
+            className="flex flex-col gap-3"
             style={{
               opacity: animating ? 0 : 1,
               transform: animating
@@ -115,22 +105,15 @@ export default function TestimonialsFade({
               transition: "opacity 0.32s ease, transform 0.32s ease",
             }}
           >
-            <span className="w-fit rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-800">
-              {currentLanguage === "id" ? "Testimoni" : "Testimonial"}
+            <span className="w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
+              {currentLanguage === "id" ? "Dokumentasi" : "Milestone"}
             </span>
-
-            <blockquote className="text-sm leading-relaxed text-slate-700 sm:text-base italic max-h-72 overflow-y-auto pr-1">
-              &quot;{activeTestimonial.text}&quot;
-            </blockquote>
-
-            <div className="mt-1 pt-3 border-t border-slate-100">
-              <h3 className="text-lg font-bold text-slate-900 leading-snug">
-                {activeTestimonial.name}
-              </h3>
-              <p className="text-xs font-medium text-slate-500 mt-0.5">
-                {activeTestimonial.role}
-              </p>
-            </div>
+            <h3 className="text-xl font-bold text-slate-900 leading-snug sm:text-2xl">
+              {achievement.title[currentLanguage]}
+            </h3>
+            <p className="text-sm leading-relaxed text-slate-500 sm:text-base">
+              {achievement.description[currentLanguage]}
+            </p>
           </div>
 
           {/* Bottom: chevrons + dots */}
@@ -148,7 +131,7 @@ export default function TestimonialsFade({
 
             {/* Dots */}
             <div className="flex items-center gap-2">
-              {testimonials.map((_, i) => (
+              {data.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => goTo(i, i > current ? "next" : "prev")}

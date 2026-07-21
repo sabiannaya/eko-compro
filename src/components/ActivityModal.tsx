@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity} from "@/utils/TypeContext";
+import { Activity } from "@/utils/TypeContext";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState } from "react";
@@ -110,23 +110,6 @@ const ActivityModal = ({
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             {activity.title[currentLanguage]}
           </h3>
-          <div className="flex items-center gap-2 text-gray-600 mb-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-5 h-5 text-blue-500"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5"
-              />
-            </svg>
-            <span className="text-sm">{activity.schedule[currentLanguage]}</span>
-          </div>
 
           {/* Description with Read More functionality */}
           <div className="mb-6">

@@ -1,4 +1,5 @@
 import {
+  Achievement,
   Activity,
   facilitiesInterface,
   ProgramInterface,
@@ -489,53 +490,160 @@ export const testimonials = [
 
 export const activitiesData: Activity[] = [
   {
-    id: "act-1",
+    id: "act-online-learning",
     title: {
-      en: "Intensive Learning Activities",
-      id: "Kegiatan Belajar Intensif",
+      en: "Online Learning",
+      id: "Pembelajaran Online",
     },
     description: {
-      en: "Intensive learning activities focused on academic competitions, problem-solving, and character development.",
-      id: "Kegiatan belajar intensif yang berfokus pada kompetisi akademik, pemecahan masalah, dan pengembangan karakter.",
+      en: "Interactive online sessions with direct tutor guidance, group discussions, and step-by-step problem solving via Zoom.",
+      id: "Sesi belajar online yang interaktif dengan bimbingan tutor, diskusi kelompok, dan pembahasan soal secara mendalam.",
     },
-    thumbnail: "/activities1.jpg",
-    images: ["/activities1.jpg"],
-    category: {
-      en: "Intensive Learning",
-      id: "Pembelajaran Intensif",
-    },
-    schedule: {
-      en: "Adjustable Schedule",
-      id: "Menyesuaikan Jadwal",
-    },
-    tags: ["Luring"],
-  },
-  {
-    id: "act-2",
-    title: {
-      en: "Online Learning Activities",
-      id: "Kegiatan Belajar Daring",
-    },
-    description: {
-      en: "Online programs focused on teamwork, problem-solving, and character development.",
-      id: "Program daring yang berfokus pada kerja sama tim, pemecahan masalah, dan pengembangan karakter.",
-    },
-    thumbnail: "/activitieszoom1.jpg",
+    thumbnail: "/Activity/Online-learning/activitieszoom1.jpg",
     images: [
-      "/activitieszoom1.jpg",
-      "/activitieszoom2.jpg",
-      "/activitieszoom3.jpg",
-      "/activitieszoom4.jpg",
+      "/Activity/Online-learning/activitieszoom1.jpg",
+      "/Activity/Online-learning/activitieszoom2.jpg",
+      "/Activity/Online-learning/activitieszoom3.jpg",
+      "/Activity/Online-learning/activitieszoom4.jpg",
     ],
     category: {
-      en: "Online Learning",
-      id: "Pembelajaran Daring",
+      en: "Online Class",
+      id: "Kelas Daring",
     },
-    schedule: {
-      en: "Adjustable Schedule",
-      id: "Menyesuaikan Jadwal",
+    tags: ["Live Session", "Interactive", "Discussion"],
+  },
+  {
+    id: "act-offline-learning",
+    title: {
+      en: "Offline Learning",
+      id: "Pembelajaran Offline",
     },
-    tags: ["daring"],
+    description: {
+      en: "In-person classes focusing on core concepts, hands-on practice, and friendly study support in a comfortable setting.",
+      id: "Belajar tatap muka yang nyaman dan terarah, fokus pada pemahaman konsep dasar, latihan soal, serta bimbingan personal.",
+    },
+    thumbnail: "/Activity/Offline-learning/1.jpeg",
+    images: [
+      "/Activity/Offline-learning/1.jpeg",
+      "/Activity/Offline-learning/2.jpeg",
+      "/Activity/Offline-learning/3.jpeg",
+      "/Activity/Offline-learning/4.jpeg",
+      "/Activity/Offline-learning/5.jpeg",
+      "/Activity/Offline-learning/6.jpeg",
+      "/Activity/Offline-learning/7.jpeg",
+      "/Activity/Offline-learning/8.jpeg",
+    ],
+    category: {
+      en: "Offline Class",
+      id: "Kelas Luring",
+    },
+    tags: ["Mentoring", "Practice", "Classroom"],
+  },
+  {
+    id: "act-gladiator",
+    title: {
+      en: "Gladiator",
+      id: "Gladiator",
+    },
+    description: {
+      en: "Fun challenge sessions that encourage teamwork, critical thinking, and healthy learning motivation among students.",
+      id: "Kegiatan belajar dan tantangan seru untuk melatih kerja sama tim, berpikir kritis, dan menumbuhkan semangat belajar.",
+    },
+    thumbnail: "/Activity/Gladiator/1.jpeg",
+    images: [
+      "/Activity/Gladiator/1.jpeg",
+      "/Activity/Gladiator/2.jpeg",
+      "/Activity/Gladiator/3.jpeg",
+    ],
+    category: {
+      en: "Enrichment Program",
+      id: "Program Pengayaan",
+    },
+    tags: ["Challenge", "Teamwork", "Performance"],
+  },
+  {
+    id: "act-gladiator-tryout-gl-tka",
+    title: {
+      en: "Gladiator (Try Out GL - TKA)",
+      id: "Gladiator (Try Out GL - TKA)",
+    },
+    description: {
+      en: "Realistic practice exam sessions to help students evaluate their progress, build confidence, and master exam.",
+      id: "Simulasi try out berkala untuk membantu siswa mengukur pemahaman, membangun rasa percaya diri, dan menguasai ujian.",
+    },
+    thumbnail: "/Activity/Gladiator (Try Out GL - TKA)/1.jpeg",
+    images: [
+      "/Activity/Gladiator (Try Out GL - TKA)/1.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/2.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/3.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/4.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/5.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/6.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/7.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/8.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/9.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/10.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/11.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/12.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/13.jpeg",
+      "/Activity/Gladiator (Try Out GL - TKA)/14.jpeg",
+    ],
+    category: {
+      en: "Try Out Program",
+      id: "Program Try Out",
+    },
+    tags: ["Simulation", "Exam Prep", "Evaluation"],
+  },
+];
+
+export const achievementsData: Achievement[] = [
+  {
+    id: "ach-1",
+    title: {
+      en: "1st Place of TKA Challenge in Bandung City",
+      id: "Juara 1 Challenge TKA Se-Bandung",
+    },
+    description: {
+      en: "Bimbel GL Congratulates Daisha Azzura Shaliha for winning 1st Place in the TKA Challenge in Bandung City.",
+      id: "Bimbel GL mengucapkan selamat kepada ananda Daisha Azzura Shaliha atas keberhasilan meraih Juara 1 Challenge TKA Sekota Bandung.",
+    },
+    image: "/Achievements/1.jpeg",
+  },
+  {
+    id: "ach-2",
+    title: {
+      en: "1st Honorable Mention of Speech Contest in Bandung City",
+      id: "Juara Harapan 1 Lomba Pidato Se-Bandung",
+    },
+    description: {
+      en: "Bimbel GL Congratulates Daisha Azzura Shaliha for winning 1st Honorable Mention of Speech Contest in Bandung City organized by SMP BPK Penabur.",
+      id: "Bimbel GL mengucapkan selamat kepada ananda Daisha Azzura Shaliha atas keberhasilan meraih Juara Harapan 1 Lomba Pidato Se-Bandung yang diadakan oleh SMP BPK Penabur.",
+    },
+    image: "/Achievements/2.jpeg",
+  },
+  {
+    id: "ach-3",
+    title: {
+      en: "3rd Best TKA Student in SMPN 2 Bandung",
+      id: "Siswa TKA Terbaik ke-3 SMPN 2 Bandung",
+    },
+    description: {
+      en: "Bimbel GL Congratulates Akbar Yara Bela Rista Nurzaman for being the 3rd Best TKA Student in SMPN 2 Bandung.",
+      id: "Bimbel GL mengucapkan selamat kepada ananda Akbar Yara Bela Rista Nurzaman atas keberhasilan meraih Siswa TKA Terbaik ke-3 SMPN 2 Bandung.",
+    },
+    image: "/Achievements/3.jpeg",
+  },
+  {
+    id: "ach-4",
+    title: {
+      en: "2nd Place of Speech Contest in Bandung City",
+      id: "Juara 2 Lomba Pidato Se-Bandung",
+    },
+    description: {
+      en: "Bimbel GL Congratulates Luthfi Naufal Oktavian for winning 2nd Place of Speech Contest in Bandung City organized by the Bandung City Education Office.",
+      id: "Bimbel GL mengucapkan selamat kepada ananda Luthfi Naufal Oktavian atas keberhasilan meraih Juara 2 Lomba Pidato Se-Bandung yang diadakan oleh Dinas Kota Bandung.",
+    },
+    image: "/Achievements/4.jpeg",
   },
 ];
 
