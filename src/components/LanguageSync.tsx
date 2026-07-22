@@ -29,7 +29,8 @@ export default function LanguageSync() {
 
       isInitialized.current = true;
     }
-  }, []); // Remove dependencies to prevent loop
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run once on mount to restore saved language preference
 
   useEffect(() => {
     // Only update cookie when language changes and component is initialized

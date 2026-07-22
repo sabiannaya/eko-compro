@@ -53,7 +53,7 @@ export default function Map({ latitude, longitude }: MapProps) {
     return () => {
       try {
         map.remove();
-      } catch (e) {
+      } catch {
         // Ignore cleanup errors if element is already detached
       }
     };
