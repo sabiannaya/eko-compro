@@ -160,14 +160,13 @@ export default function HomePageClient({ activities }: HomePageClientProps = {})
                 return (
                   <div
                     key={index}
-                    className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${
-                      isAloneInLastRow
-                        ? "lg:col-span-full lg:max-w-md lg:mx-auto"
-                        : ""
-                    }`}
+                    className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${isAloneInLastRow
+                      ? "lg:col-span-full lg:max-w-md lg:mx-auto"
+                      : ""
+                      }`}
                   >
                     <div className="flex flex-col items-center text-center">
-                      <div className="relative w-16 h-16 mb-4">
+                      <div className="relative w-24 h-24 mb-4">
                         <Image
                           src={method.thumbnail}
                           alt={method.title[currentLanguage]}
@@ -203,7 +202,7 @@ export default function HomePageClient({ activities }: HomePageClientProps = {})
                 data={staffData}
                 currentLanguage={currentLanguage}
                 imageHeight={200}
-                imageWidth={150}
+                imageWidth={200}
                 slidesDesktop={3}
               />
             </div>
@@ -223,11 +222,10 @@ export default function HomePageClient({ activities }: HomePageClientProps = {})
               {facilitiesData.map((level, index) => (
                 <div
                   key={index}
-                  className={`p-6 ${
-                    index < facilitiesData.length - 1
-                      ? "border-b border-gray-200"
-                      : ""
-                  }`}
+                  className={`p-6 ${index < facilitiesData.length - 1
+                    ? "border-b border-gray-200"
+                    : ""
+                    }`}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-3 ">
                     <div className="lg:col-span-1">

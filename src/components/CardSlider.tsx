@@ -11,8 +11,8 @@ interface CardData {
   name?: string;
   title: LocalizedField;
   description?: LocalizedField;
-  images?: string[]; 
-  thumbnail: string; 
+  images?: string[];
+  thumbnail: string;
 
   position?: string;
   category?: LocalizedField;
@@ -31,7 +31,7 @@ interface CardSliderData<T extends CardData = CardData> {
 const CardSlider = <T extends CardData>({
   data = [],
   imageHeight = 300,
-  imageWidth = 200,
+  imageWidth = 300,
   slidesDesktop = 3,
   onCardClick,
   currentLanguage = "id",
