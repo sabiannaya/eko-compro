@@ -31,8 +31,15 @@ export default function Map({ latitude, longitude }: MapProps) {
   useEffect(() => {
     if (!mapRef.current) return;
 
+    const container = mapRef.current;
+
+    // Prevent re-initialization if container already has a leaflet instance
+    if ((container as unknown as { _leaflet_id?: string })._leaflet_id) {
+      return;
+    }
+
     // Initialize map
-    const map = L.map(mapRef.current).setView([latitude, longitude], 19);
+    const map = L.map(container).setView([latitude, longitude], 19);
 
     // Add tile layer
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -44,7 +51,11 @@ export default function Map({ latitude, longitude }: MapProps) {
 
     // Cleanup on unmount
     return () => {
-      map.remove();
+      try {
+        map.remove();
+      } catch (e) {
+        // Ignore cleanup errors if element is already detached
+      }
     };
   }, [latitude, longitude]);
 

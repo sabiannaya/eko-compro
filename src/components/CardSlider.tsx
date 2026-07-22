@@ -1,7 +1,7 @@
 // components/CardSlider.tsx
 "use client";
 import { LocalizedField } from "@/utils/TypeContext";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 import "swiper/css";
 import { EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -45,7 +45,7 @@ const CardSlider = <T extends CardData>({
           origin-center relative group cursor-pointer"
           onClick={() => onCardClick && onCardClick(item)}
         >
-          <Image
+          <ImageWithSkeleton
             src={item.thumbnail}
             alt={item.title[currentLanguage] || item.name || "Card Image"}
             width={imageWidth}

@@ -1,7 +1,7 @@
 "use client";
 
 import { Achievement } from "@/utils/TypeContext";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 interface AchievementsSliderProps {
@@ -74,7 +74,7 @@ export default function AchievementsSlider({
                   : "opacity-0 scale-95 pointer-events-none z-0"
                   }`}
               >
-                <Image
+                <ImageWithSkeleton
                   src={item.image}
                   alt={item.title[currentLanguage] || item.title.id}
                   fill

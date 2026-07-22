@@ -1,15 +1,19 @@
 "use client";
 
 import { Activity } from "@/utils/TypeContext";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  XMarkIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { useState } from "react";
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { useState, useRef } from "react";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -27,6 +31,8 @@ const ActivityModal = ({
   currentLanguage = "id",
 }: ActivityModalProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const swiperRef = useRef<SwiperType | null>(null);
+
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
@@ -41,7 +47,7 @@ const ActivityModal = ({
       onClick={onClose}
     >
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/60"
         aria-hidden="true"
         onClick={onClose}
       />
@@ -52,22 +58,24 @@ const ActivityModal = ({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-colors z-20"
+          className="absolute top-3 right-3 p-2 rounded-full bg-white/90 hover:bg-white text-gray-700 hover:text-gray-900 transition-colors z-30 shadow-md"
         >
           <XMarkIcon className="w-6 h-6" />
         </button>
 
         {/* Image Section - Fixed height, always visible */}
         {activity.images && activity.images.length > 0 && (
-          <div className="relative w-full h-80 sm:h-[50vh] flex-shrink-0 overflow-hidden rounded-t-lg">
+          <div className="relative w-full h-80 sm:h-[50vh] flex-shrink-0 overflow-hidden rounded-t-lg bg-slate-200">
             <Swiper
-              spaceBetween={10}
+              spaceBetween={0}
               slidesPerView={1}
-              navigation={true}
+              navigation={false}
               pagination={{ clickable: true }}
-              effect={"fade"}
-              modules={[Navigation, Pagination, EffectFade]}
-              className="w-full h-full"
+              modules={[Navigation, Pagination]}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              className="w-full h-full activityModalSwiper"
             >
               {activity.images.map((imgSrc, index) => (
                 <SwiperSlide key={index}>
@@ -81,29 +89,48 @@ const ActivityModal = ({
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium z-10">
+
+            {/* Custom Navigation Arrows */}
+            {activity.images.length > 1 && (
+              <>
+                <button
+                  onClick={() => swiperRef.current?.slidePrev()}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-gray-700 hover:text-gray-900 shadow-md transition-all duration-200 cursor-pointer"
+                >
+                  <ChevronLeftIcon className="w-5 h-5 stroke-2" />
+                </button>
+                <button
+                  onClick={() => swiperRef.current?.slideNext()}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-gray-700 hover:text-gray-900 shadow-md transition-all duration-200 cursor-pointer"
+                >
+                  <ChevronRightIcon className="w-5 h-5 stroke-2" />
+                </button>
+              </>
+            )}
+
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10" />
+            <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium z-20">
               {activity.category[currentLanguage]}
             </span>
           </div>
         )}
 
         {/* Fallback image */}
-        {!activity.images ||
-          (activity.images.length === 0 && activity.thumbnail && (
-            <div className="relative w-full h-80 sm:h-[40vh] flex-shrink-0 overflow-hidden rounded-t-lg">
+        {(!activity.images || activity.images.length === 0) &&
+          activity.thumbnail && (
+            <div className="relative w-full h-80 sm:h-[40vh] flex-shrink-0 overflow-hidden rounded-t-lg bg-slate-200">
               <Image
                 src={activity.thumbnail}
                 alt={activity.title[currentLanguage]}
                 fill
                 className="object-cover rounded-t-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium">
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10" />
+              <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium z-20">
                 {activity.category[currentLanguage]}
               </span>
             </div>
-          ))}
+          )}
 
         {/* Content Section - Scrollable */}
         <div className="flex-1 overflow-y-scroll p-6 sm:p-8">

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getPageMetadata } from "@/utils/MetadataContext";
 import { getPageMetadataByKey } from "@/data/metadata";
+import { getActivitiesData } from "@/utils/getActivities";
 import HomePageClient from "./HomePageClient";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -22,5 +23,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function HomePage() {
-  return <HomePageClient />;
+  const activities = getActivitiesData();
+  return <HomePageClient activities={activities} />;
 }

@@ -38,7 +38,12 @@ import {
   achievements as achievementsSection,
 } from "@/data/sections";
 
-export default function HomePageClient() {
+interface HomePageClientProps {
+  activities?: Activity[];
+}
+
+export default function HomePageClient({ activities }: HomePageClientProps = {}) {
+  const activitiesList = activities ?? activitiesData;
   const { currentLanguage } = useLanguage();
   // const { getLocalizedText } = useLocalizedMetadata();
   const [showModal, setShowModal] = useState(false);
@@ -289,7 +294,7 @@ export default function HomePageClient() {
 
             {/* Desktop Grid */}
             <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {activitiesData.map((activity) => (
+              {activitiesList.map((activity) => (
                 <div
                   key={activity.id}
                   className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white
@@ -335,7 +340,7 @@ export default function HomePageClient() {
             {/* Mobile Carousel */}
             <div className="md:hidden rounded-2xl overflow-hidden">
               <CardSlider
-                data={activitiesData}
+                data={activitiesList}
                 currentLanguage={currentLanguage}
                 onCardClick={openModal}
               />

@@ -60,6 +60,7 @@ export type Activity = {
   id: string;
   title: LocalizedField;
   description: LocalizedField;
+  dirName?: string;
   thumbnail: string;
   images: string[];
   category: LocalizedField;

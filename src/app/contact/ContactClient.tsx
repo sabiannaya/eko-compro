@@ -12,10 +12,11 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
+const Map = dynamic(() => import("@/components/Map"), {
+  ssr: false,
+});
+
 export default function Homepage() {
-  const Map = dynamic(() => import("@/components/Map"), {
-    ssr: false,
-  });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -193,7 +194,7 @@ export default function Homepage() {
               </p> */}
 
               <a
-                href={`mailto:iqbalghazali44@gmail.com?subject=Contact%20Form%20Submission&body=Name:%20${formData.name}%0AEmail:%20${formData.email}%0AMessage:%20${formData.message}`}
+                href={`mailto:guidancelearningmreko@gmail.com?subject=Contact%20Form%20Submission&body=Name:%20${formData.name}%0AEmail:%20${formData.email}%0AMessage:%20${formData.message}`}
                 onClick={handleSubmit}
                 className="block w-full bg-green-500 hover:bg-green-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 transform text-center no-underline"
               >

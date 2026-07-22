@@ -162,12 +162,12 @@ export const teachingMethods: teachingMethodsInterface[] = [
     id: "tm-1",
     thumbnail: "/Logo.png",
     title: {
-      en: "Private & Group Classes",
-      id: "Kelas Privat & Kelompok",
+      en: "Private & Semi Private",
+      id: "Kelas Privat & Semi Privat",
     },
     description: {
-      en: "Flexible learning options with both private and group sessions tailored to individual needs.",
-      id: "Pilihan belajar fleksibel dengan sesi privat dan kelompok yang disesuaikan dengan kebutuhan individu.",
+      en: "Flexible learning options with private sessions (maximum of 3 students) and semi-private sessions (10-12 students) tailored to individual needs. Class sizes are limited to ensure effectiveness and efficiency during the learning process.",
+      id: "Tersedia pilihan belajar yang fleksibel dengan sesi privat (maksimal 3 orang) dan semi privat (10-12 orang) yang disesuaikan dengan kebutuhan masing-masing individu. Kapasitas kelas dibatasi guna menjaga efektivitas serta efisiensi selama proses pembelajaran.",
     },
   },
   {
@@ -491,6 +491,7 @@ export const testimonials = [
 export const activitiesData: Activity[] = [
   {
     id: "act-online-learning",
+    dirName: "Online-learning",
     title: {
       en: "Online Learning",
       id: "Pembelajaran Online",
@@ -514,6 +515,7 @@ export const activitiesData: Activity[] = [
   },
   {
     id: "act-offline-learning",
+    dirName: "Offline-learning",
     title: {
       en: "Offline Learning",
       id: "Pembelajaran Offline",
@@ -540,53 +542,35 @@ export const activitiesData: Activity[] = [
     tags: ["Mentoring", "Practice", "Classroom"],
   },
   {
-    id: "act-gladiator",
+    id: "act-gladiator-tryout-gl-tka",
+    dirName: "Gladiator",
     title: {
       en: "Gladiator",
       id: "Gladiator",
     },
     description: {
-      en: "Fun challenge sessions that encourage teamwork, critical thinking, and healthy learning motivation among students.",
-      id: "Kegiatan belajar dan tantangan seru untuk melatih kerja sama tim, berpikir kritis, dan menumbuhkan semangat belajar.",
+      en: "Free tryout activities open to all students (general public) to help measure students' abilities and readiness in facing TKA. Awards are also given to the best participants to continuously motivate students' learning spirit. (Challenge, simulation, exam prep, evaluation)",
+      id: "Kegiatan Try out gratis yang terbuka untuk seluruh pelajar (umum) guna membantu mengukur kemampuan serta kesiapan siswa/i dalam menghadapi TKA. Penghargaan juga diberikan kepada peserta terbaik untuk terus memotivasi semangat belajar siswa. (Challenge, simulation, exam prep, evaluation)",
     },
     thumbnail: "/Activity/Gladiator/1.jpeg",
     images: [
       "/Activity/Gladiator/1.jpeg",
+      "/Activity/Gladiator/1a.jpeg",
       "/Activity/Gladiator/2.jpeg",
+      "/Activity/Gladiator/2a.jpeg",
       "/Activity/Gladiator/3.jpeg",
-    ],
-    category: {
-      en: "Enrichment Program",
-      id: "Program Pengayaan",
-    },
-    tags: ["Challenge", "Teamwork", "Performance"],
-  },
-  {
-    id: "act-gladiator-tryout-gl-tka",
-    title: {
-      en: "Gladiator (Try Out GL - TKA)",
-      id: "Gladiator (Try Out GL - TKA)",
-    },
-    description: {
-      en: "Realistic practice exam sessions to help students evaluate their progress, build confidence, and master exam.",
-      id: "Simulasi try out berkala untuk membantu siswa mengukur pemahaman, membangun rasa percaya diri, dan menguasai ujian.",
-    },
-    thumbnail: "/Activity/Gladiator (Try Out GL - TKA)/1.jpeg",
-    images: [
-      "/Activity/Gladiator (Try Out GL - TKA)/1.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/2.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/3.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/4.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/5.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/6.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/7.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/8.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/9.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/10.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/11.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/12.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/13.jpeg",
-      "/Activity/Gladiator (Try Out GL - TKA)/14.jpeg",
+      "/Activity/Gladiator/3a.jpeg",
+      "/Activity/Gladiator/4.jpeg",
+      "/Activity/Gladiator/5.jpeg",
+      "/Activity/Gladiator/6.jpeg",
+      "/Activity/Gladiator/7.jpeg",
+      "/Activity/Gladiator/8.jpeg",
+      "/Activity/Gladiator/9.jpeg",
+      "/Activity/Gladiator/10.jpeg",
+      "/Activity/Gladiator/11.jpeg",
+      "/Activity/Gladiator/12.jpeg",
+      "/Activity/Gladiator/13.jpeg",
+      "/Activity/Gladiator/14.jpeg",
     ],
     category: {
       en: "Try Out Program",

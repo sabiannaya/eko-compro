@@ -59,6 +59,15 @@ const Footer = ({ currentLanguage = "id" }) => {
                   Lingkar Selatan, Lengkong
                   <br />
                   Kota Bandung, Jawa Barat
+                  <br />
+                  <a
+                    href="https://maps.app.goo.gl/rkh3jK6vwCuahz1D9?g_st=ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-500 transition-colors duration-200"
+                  >
+                    View on Google Maps
+                  </a>
                 </address>
               </div>
 

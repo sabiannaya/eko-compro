@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 
 interface MarqueeImageProps {
   images: string[];
@@ -70,13 +70,14 @@ const MarqueeImage = ({
           }}
         >
           {infiniteImages.map((imageSrc, index) => (
-            <Image
+            <ImageWithSkeleton
               key={index}
               src={imageSrc}
               alt={`${alt} ${index + 1}`}
               width={imageWidth}
               height={imageHeight}
               className="flex-shrink-0 object-cover rounded-lg"
+              containerClassName="flex-shrink-0"
               style={{
                 marginRight: spacing,
               }}

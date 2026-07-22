@@ -115,8 +115,8 @@ export const contact: Section = {
 export const contactDetail: Section = {
   id: "contact-detail-1",
   title: {
-    id: "Mari Ngobrol!",
-    en: "Let's have a Chat!",
+    id: "Hubungi Kami",
+    en: "We would love to hear from you!",
   },
   description: {
     id: "Kami siap membantu Anda! Jika ada pertanyaan, saran, atau ingin tahu lebih banyak tentang program bimbingan belajar kami, jangan ragu untuk menghubungi kami. Tim kami akan dengan senang hati merespons dan memberikan informasi yang Anda butuhkan.",
@@ -173,11 +173,11 @@ export const contactInfo: Section[] = [
 
 export const contactForm: Section[] = [
 
-    {
-      id: "HeadlineContactForm",
-      title: {
-        id: "Kirim Pesan",
-        en: "Send a Message",
+  {
+    id: "HeadlineContactForm",
+    title: {
+      id: "Kirim Pesan",
+      en: "Send a Message",
     },
     description: {
       id: " ",
